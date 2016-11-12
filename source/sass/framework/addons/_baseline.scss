@@ -1,0 +1,29 @@
+/***
+    BASELINE
+
+    Setup baseline and spacing units for vertical & horizontal rhythm.
+    For h1 through h6 (and other textelements) you can use
+    $sb-fontsize * x.5 $sb-baseline, if rounded values are too big or small.
+
+    EG:
+    h2 {
+        line-height: $sb-baseline * 2.5;
+    }
+
+***/
+/*
+    Set default font-size
+*/
+$sb-fontsize: 1rem !default;
+
+$sb-fontsize-h: $sb-fontsize !default;
+
+/*
+    Set default line-height
+*/
+$sb-lineheight: 1.4 !default;
+/*
+    Calculate baseline (= spacing unit for margins and paddings) from default
+    font-size and default line-height
+*/
+$sb-baseline: $sb-fontsize * $sb-lineheight !default;

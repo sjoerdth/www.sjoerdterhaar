@@ -1,0 +1,84 @@
+/*
+	http://tympanus.net/codrops/2012/10/04/custom-drop-down-list-styling/
+
+	refactored for sass & BEM
+*/
+
+.custom-dropdown
+{
+    /* Size & position */
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 0 5px 10px;
+
+    /* Styles */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-out;
+}
+
+/* Little arrow */
+.custom-dropdown:after
+{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #518688 transparent;
+    pointer-events: none;
+}
+
+.custom-dropdown__options
+{
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+
+    /* Styles */
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    border-bottom: none;
+    list-style: none;
+    transition: all 0.3s ease-out;
+
+    /* Hiding */
+    max-height: 0;
+    overflow: hidden;
+	a
+	{
+		display: block;
+		text-decoration: none;
+		padding: 5px 0;
+		transition: all 0.3s ease-out;
+	}
+}
+
+
+/* Active state */
+
+.custom-dropdown--active
+{
+    border-radius: 5px 5px 0 0;
+    box-shadow: none;
+    border-bottom: none;
+	z-index: z(overlay);
+	&:after
+	{
+		border-color: #82d1ff transparent;
+	}
+	>.custom-dropdown__options
+	{
+		//border-bottom: 1px solid rgba(0,0,0,0.2);
+		max-height: 400px;
+	}
+}

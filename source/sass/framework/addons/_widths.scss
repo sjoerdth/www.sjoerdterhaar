@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ *
+ */
+
+ // Calculate column widths and create classnames
+@for $i from $sb-grid-start through $sb-grid-end {
+    @if $i <= 2 {
+        .col-1of#{$i} {
+            width: (100 / $i) * 1%;
+        }
+    } @else {
+        @for $x from ($i - 1) through 1 {
+            .col-#{$i - $x}of#{$i} {
+                width: 100 - ((100 / $i) * $x) * 1%;
+            }
+        }
+    }
+}
+
+// Calculate responsive column widths and create classnames
+
+//loop through set breakpoint
+@each $sb-breakpoint__name, $sb-breakpoint__size in $sb-breakpoints {
+
+    //Set repsonsive breakpoint width
+    @media (max-width: $sb-breakpoint__size) {
+        //Loop through number of columns set for grid
+        @for $i from $sb-grid-start through $sb-grid-end {
+            @if $i <= 2 {
+                //Set breakpoint classname for x-of-1 and x-of-2
+                .#{$sb-breakpoint__name}-col-1of#{$i} {
+                    width: (100 / $i) * 1%;
+                }
+            } @else {
+                //Set breakpoint classname for x-of-3 and x-of-$sb-grid-end. Note there is no x-of-x except for 1-of-1
+                @for $x from ($i - 1) through 1 {
+                    .#{$sb-breakpoint__name}-col-#{$i - $x}of#{$i} {
+                        width: 100 - ((100 / $i) * $x) * 1%;
+                    }
+                }
+            }
+        }
+    }
+}

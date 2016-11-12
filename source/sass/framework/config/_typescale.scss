@@ -1,0 +1,22 @@
+/***
+    [#TYPE SCALE]
+    Documentation -> addon/typography
+
+    Set exponential growth / shrinkage of <h1> & .h1 through <h6> & .h6
+    and
+    growth of: .deca, .hecto, .kilo, .mega, .giga, .tera.
+    and
+    shrinkage of: .deci, .centi, .milli, .micro, .nano, .pico
+
+    Suggested values:
+    minor-second: 1.067;
+    major-second: 1.125;
+    minor-third: 1.2;
+    major-third: 1.25;
+    perfect-fourth: 1.333;
+    augmented-fourth: 1.414;
+    perfect-fifth: 1.5;
+    golden-ratio: 1.618;
+***/
+
+$sb-ratio: 1.333;

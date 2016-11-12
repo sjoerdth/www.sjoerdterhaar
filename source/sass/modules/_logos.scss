@@ -1,0 +1,74 @@
+.m-logo--qs {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.m-logo--choco {
+    max-width: 185px;
+
+    @include media(null, $sb-breakpoint__small) {
+        position: absolute;
+        top: $sb-baseline / 2;
+        left: $sb-baseline / 2;
+    }
+}
+
+.m-logo--choco--base {
+    @include media(null, $sb-breakpoint__small) {
+        display: none;
+    }
+}
+
+.m-logo--choco--small {
+    display: none;
+
+    @include media(null, $sb-breakpoint__small) {
+        display: block;
+        max-width: 150px;
+    }
+}
+
+.m-logo-sticky-bar {
+    position: absolute;
+    top: $sb-baseline / 2;
+    left: $sb-baseline;
+
+    @include media(null, $sb-breakpoint__small) {
+        display: none;
+    }
+
+    @include media($sb-breakpoint__large, null) {
+        .m-logo-sticky-bar__medium {
+            display: none;
+        }
+        .m-logo-sticky-bar__large {
+            display: block;
+        }
+    }
+
+    @include media(null, $sb-breakpoint__large) {
+        .m-logo-sticky-bar__medium {
+            display: block;
+        }
+        .m-logo-sticky-bar__large {
+            display: none;
+        }
+    }
+
+    img {
+        height: 1.2em * ($sb-lineheight);
+        line-height: 1;
+        vertical-align: top;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+}
+
+.is-sticky {
+    .m-logo-sticky-bar {
+        img {
+            opacity: 1;
+        }
+    }
+}

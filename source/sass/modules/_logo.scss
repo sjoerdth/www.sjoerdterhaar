@@ -1,0 +1,38 @@
+.m-logo {
+    // animation-name followed by duration in seconds, infinite for loop
+    animation: colorchange 50s infinite;
+    //-webkit-animation: colorchange 10s infinite; /* Chrome and Safari | gulp prefix? */
+
+    position: absolute;
+    top: $sb-baseline;
+    left: $sb-baseline;
+
+    width: 10rem;
+
+    padding: $sb-baseline/2;
+
+    img {
+        width: 100%;
+        vertical-align: top;
+        display: block;
+    }
+}
+
+@keyframes colorchange
+{
+    0%   {background: palette(brand-pink);}
+    25%  {background: palette(brand-blue);}
+    //50%  {background: #17FF17;}
+    50%  {background: palette(brand-orange);}
+    75% {background: #B2FF17;}
+    100%   {background: palette(brand-pink);}
+}
+
+//@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate | gulp prefix?  */
+//{
+//    0%   {background: red;}
+//    25%  {background: yellow;}
+//    50%  {background: blue;}
+//    75%  {background: green;}
+//    100% {background: red;}
+//}

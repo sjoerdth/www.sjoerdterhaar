@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    DEFAULTS
+\*------------------------------------*/
+/**
+ * Default variables. Redefine these in your `_config.scss` file to override them.
+ */
+
+/***
+    TYPE
+***/
+/*
+    TYPE SCALE
+
+    This determines the exponential growth of the font-size as seen on
+    http://type-scale.com/
+*/
+$sb-minor-second       : 1.067 !default;
+$sb-major-second       : 1.125 !default;
+$sb-minor-third        : 1.2 !default;
+$sb-major-third        : 1.25 !default;
+$sb-perfect-fourth     : 1.333 !default;
+$sb-augmented-fourth   : 1.414 !default;
+$sb-perfect-fifth      : 1.5 !default;
+$sb-golden-ratio       : 1.618 !default;
+
+/*
+    Set default ratio used throughout project
+*/
+$sb-ratio: $sb-major-third !default;
+
+/***
+    GRID
+***/
+/*  Set default number of columns used in grid */
+$sb-grid-start: 1 !default;
+$sb-grid-end: 12 !default;
+
+/***
+    WIDTHS & BREAKPOINTS
+***/
+/*
+    Define breakpoints for responsive
+*/
+$sb-breakpoint__large:     68.750em !default; // Small desktop to large desktop
+$sb-breakpoint__medium:    50em !default; // Portrait tablet to landscape tablet
+$sb-breakpoint__small:     30em !default; // Portrait mobile to landscape mobile
+/*
+    Set array containing all breakpoints in descending order, these will be used
+    to create the media-queries to set the width of your grid columns.
+*/
+$sb-breakpoints: (
+    large: $sb-breakpoint__large,
+    medium: $sb-breakpoint__medium,
+    small: $sb-breakpoint__small
+) !default;
+
+/***
+    COMPONENTS
+***/
+$sb-use-baseline-grid      : false !default;
+$sb-use-grid               : false !default;
+$sb-use-grid--responsive   : false !default;
+
+/***
+    @font-face
+***/
+$sb-use-font-face: false !default;
+
+/***
+    CUSTOM Z-INDEX
+***/
+$sb-use-custom-zindex: false !default;

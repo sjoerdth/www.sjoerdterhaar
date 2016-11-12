@@ -1,0 +1,30 @@
+/***
+    [#BREAKPOINTS]
+***/
+/*
+    Change breakpoints -> or / and
+*/
+//$sb-breakpoint__large:     68.750em; // Small desktop to large desktop
+//$sb-breakpoint__medium:    50em; // Portrait tablet to landscape tablet
+//$sb-breakpoint__small:     30em; // Portrait mobile to landscape mobile
+
+/*
+    -> Set array containing all breakpoints in descending order, these will be used
+    to create the media-queries to set the width of your grid columns.
+
+    $sb-breakpoints: (
+        classname: breakpoint,
+    );
+*/
+
+$sb-breakpoint__x-large:   95em;
+$sb-breakpoint__large:     65em; // Small desktop to large desktop
+$sb-breakpoint__medium:    55em; // Portrait tablet to landscape tablet
+$sb-breakpoint__small:     45em; // Portrait mobile to landscape mobile
+
+$sb-breakpoints: (
+    x-large: $sb-breakpoint__x-large,
+    large: $sb-breakpoint__large,
+    medium: $sb-breakpoint__medium,
+    small: $sb-breakpoint__small
+);

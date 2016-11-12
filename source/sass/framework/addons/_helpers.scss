@@ -1,0 +1,127 @@
+/*
+    lists
+*/
+.h-list-reset {
+    list-style: none;
+}
+
+/*
+    circle
+*/
+.h-circle {
+    border-radius: 50%;
+}
+
+/*
+    Use to style lists inside basic content
+*/
+.h-contains-content-list {
+
+    ul,
+    ol {
+        margin-bottom: $sb-baseline;
+        margin-left: $sb-baseline;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+}
+
+/*
+    Positions
+*/
+.h-pos-static {
+    position: static;
+}
+
+.h-pos-absolute {
+    position: absolute;
+}
+
+.h-pos-relative {
+    position: relative;
+}
+
+.h-pos-fixed {
+    position: fixed;
+}
+
+.h-v-align-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.h-v-align-center-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*
+    Add framework based padding
+*/
+
+.h-soft-poles {
+    padding-top: $sb-baseline;
+    padding-bottom: $sb-baseline;
+}
+
+.h-soft-sides {
+    padding-right: $sb-baseline;
+    padding-left: $sb-baseline;
+}
+
+/*
+    Text alignments
+*/
+.h-text-left {
+    text-align: left;
+}
+
+.h-text-center {
+    text-align: center;
+}
+
+.h-text-right {
+    text-align: right;
+}
+
+/*
+    White space
+*/
+.h-nowrap {
+    white-space: nowrap;
+}
+
+/*------------------------------------*\
+    STATES
+\*------------------------------------*/
+.h-shown {
+    display: block !important;
+}
+
+.h-hidden {
+    display: none !important;
+}
+
+.h-shown {
+    display: block !important;
+}
+
+.h-show-small {
+    @include media(null, $sb-breakpoint__small) {
+        display: block !important;
+    }
+}
+
+.h-hidden-small {
+    @include media(null, $sb-breakpoint__small) {
+        display: none !important;
+    }
+}

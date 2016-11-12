@@ -1,0 +1,41 @@
+.o-grid--push-down {
+    margin-bottom: $sb-baseline;
+}
+
+.o-grid__cell--fixed-small {
+    min-width: 9rem;
+    max-width: 9rem;
+}
+
+.o-grid__cell--ui {
+    padding: $sb-baseline;
+
+    border-left: 5px solid;
+
+    background: white;
+    box-shadow: $base-shadow;
+}
+
+.o-grid__cell--ui-pink {
+    border-color:  palette(brand-pink);
+
+    a {
+        color: palette(brand-pink);
+
+        &:hover {
+            color: palette(brand-pink, dark);
+        }
+    }
+}
+
+.o-grid__cell--ui-blue {
+    border-color:  palette(brand-blue);
+
+    a {
+        color: palette(brand-blue);
+
+        &:hover {
+            color: palette(brand-blue, dark);
+        }
+    }
+}

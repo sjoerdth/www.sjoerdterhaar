@@ -1,0 +1,37 @@
+.m-form {
+
+}
+
+.m-form--filter {
+    border-bottom: 1px solid rgba( palette(grey, x-light), 0.5 );
+    padding-bottom: $sb-baseline;
+    margin-bottom: $sb-baseline;
+}
+
+    .m-form__element
+    {
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+        border: 0;
+        background: white;
+        color: palette(grey, x-dark);
+    }
+
+    .m-form__element--rounded {
+        border-radius: 1000px;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    /*
+
+    */
+    .m-form-element__icon-box
+    {
+        position: relative;
+
+        .m-form-element__icon {
+            @include vertical-align(absolute);
+            right: 1em;
+        }
+    }

@@ -1,0 +1,9 @@
+/***
+    [#GRID]
+    Documentation -> components/grid
+
+    Set number of columns used in grid, smaller $grid-end = less lines of css.
+    $grid-start should remain 1 in most cases.
+***/
+//$sb-grid-start: 1;
+$sb-grid-end: 9;

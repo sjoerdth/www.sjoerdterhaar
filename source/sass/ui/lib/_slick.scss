@@ -1,0 +1,29 @@
+/*
+	/slick-slider resets
+*/
+
+.slick__button {
+    @include vertical-align(absolute);
+    z-index: 1;
+    border: 0;
+    background: none;
+    outline: none;
+    opacity: 0.8;
+
+    @include media(null, $sb-breakpoint__small) {
+        display: none;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+}
+
+.slick__button--prev {
+    left: 0;
+}
+
+.slick__button--next {
+    right: 0;
+}

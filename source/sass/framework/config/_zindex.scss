@@ -1,0 +1,10 @@
+/***
+    [#Z-INDEX]
+    Documentation -> addons/zindex
+***/
+$sb-use-custom-zindex: true;
+
+$z-layers--custom: (
+    gfx-overlay: 1,
+    foreground: 3
+);

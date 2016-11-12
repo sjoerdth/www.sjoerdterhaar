@@ -1,0 +1,31 @@
+/*
+*  z-index: z("modal");
+*/
+
+// default z-index's
+$z-layers: (
+    "modal"   : 10000,
+    "notice"  : 9000,
+    "palm"    : 8000,
+    "overlay" : 7000,
+    "nav"     : 5000,
+    "subnav"  : 4000,
+    "below"   : 3000,
+    "cellar"  : -1000,
+    "dungeon"  : -2000,
+    "abyss"  : -3000,
+);
+
+//  Check if customs z-index's are added
+@if $sb-use-custom-zindex == true {
+    //  Merge custom z-index's into existing default z-index's
+    $z-layers: map-merge($z-layers, $z-layers--custom);
+};
+
+@function z($layer) {
+    @if not map-has-key($z-layers, $layer) {
+        @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+    }
+
+    @return map-get($z-layers, $layer);
+}

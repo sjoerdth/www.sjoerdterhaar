@@ -1,0 +1,32 @@
+.o-nav {
+	display: flex;
+	margin-bottom: 0;
+	margin-left: 0;
+	flex-flow: row wrap;
+	list-style: none;
+}
+
+.o-nav__link {
+	display: block;
+
+    padding: $sb-baseline/2;
+
+	text-decoration: none;
+	transition: all 0.25s;
+}
+
+.o-nav--vertical {
+	flex-direction: column;
+}
+
+.o-nav--center {
+	justify-content: center;
+}
+
+.o-nav--left {
+	justify-content: flex-start;
+}
+
+.o-nav--right {
+	justify-content: flex-end;
+}

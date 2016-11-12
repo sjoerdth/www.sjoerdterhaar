@@ -1,0 +1,33 @@
+/************
+
+    BASELINEGRID
+
+    Include in HTML after <body> of before </body>.
+    Repeat <div class="baselinegrid__line"></div> until screen is filled
+    <div class="baselinegrid">
+        <div class="baselinegrid__line"></div>
+    </div>
+
+************/
+
+@if $sb-use-baseline-grid == true {
+    .baselinegrid {
+        position: fixed;
+        z-index: 100000;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    .baselinegrid__line {
+        height: $sb-baseline * 0.5;
+        &:nth-child(even) {
+            border-bottom: 1px solid rgba(0, 0, 255, 0.25);
+        }
+        &:nth-child(odd) {
+            border-bottom: 1px dotted rgba(0, 0, 255, 0.25);
+        }
+    }
+}

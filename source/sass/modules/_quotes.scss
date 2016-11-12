@@ -1,0 +1,21 @@
+.m-quote {
+    margin-bottom: $sb-baseline;
+}
+
+
+    .m-quote__quote {
+        margin-bottom: $sb-baseline;
+
+        color: palette(brand-gold);
+        font-style: italic;
+        text-align: center;
+    }
+
+    .m-quote__cite {
+        display: block;
+
+        color: palette(brand-grey, light);
+        text-transform: uppercase;
+        font-style: normal;
+        text-align: center;
+    }

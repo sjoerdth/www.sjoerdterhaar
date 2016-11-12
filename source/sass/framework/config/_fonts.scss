@@ -1,0 +1,53 @@
+/*
+    Embed font-families
+
+$path: ../../fonts/avenir/;
+
+$font-families: (
+  arial__normal: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--normal,
+    font-weight: normal,
+    font-style: normal
+  ),
+  arial__bold: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--bold,
+    font-weight: bold,
+    font-style: normal
+  ),
+  arial__italic: (
+    style-name: arial__style,
+    path: $path,
+    folder: arial,
+    file-name: arial__file--italic,
+    font-weight: normal,
+    font-style: italic
+  ),
+  georgia__italic: (
+    style-name: georgia__style,
+    path: $path,
+    folder: georgia,
+    file-name: georgia__file--italic,
+    font-weight: normal,
+    font-style: italic
+  )
+);
+*/
+$use-font-face: false;
+
+/*
+
+<fonts>
+<font displayName="Proxima Nova W01 Thin Regular" psName="ProximaNovaW01-Thin" FamilyName="Proxima Nova" FontWeight="100" FontStyle="normal" FontStretch="normal" CssFamilyName="Proxima Nova W01" woff="da176885-bee9-49f7-88f0-d7ad9229ddd7.woff" eot="37994fca-b67e-41db-94b3-44077c62810a.eot" ttf="1861a7b7-09a5-4efd-b681-5214784ded39.ttf" svg="610147b3-ad15-4b4b-a0fb-25244238ab3d.svg" woff2="0583e751-caca-4cd8-af81-71b2aa5ddbbb.woff2"/>
+<font displayName="Proxima Nova W01 Thin Italic" psName="ProximaNovaW01-ThinIt" FamilyName="Proxima Nova" FontWeight="100" FontStyle="italic" FontStretch="normal" CssFamilyName="Proxima Nova W01" woff="953888b2-ac05-4781-acd8-eefab4804344.woff" eot="eba46937-62d2-4fa0-b06b-3b195ec3b81e.eot" ttf="cd88eeb4-8553-4cba-a792-65670225b71a.ttf" svg="4b497920-c95a-44e8-9877-7a1d7ad3dc9b.svg" woff2="7179129f-41a3-4e40-9065-ab5ca5a4e436.woff2"/>
+<font displayName="Proxima Nova W01 Semibold" psName="ProximaNovaW01-Semibold" FamilyName="Proxima Nova" FontWeight="400" FontStyle="normal" FontStretch="normal" CssFamilyName="Proxima Nova W01" woff="70ae52ec-d89b-4c6a-9402-854ebe423c54.woff" eot="87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot" ttf="6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf" svg="ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg" woff2="ae47a7f5-89da-4879-b934-29722c3dd451.woff2"/>
+<font displayName="Proxima Nova W01 Semibold Italic" psName="ProximaNovaW01-SemiboldIt" FamilyName="Proxima Nova" FontWeight="400" FontStyle="italic" FontStretch="normal" CssFamilyName="Proxima Nova W01" woff="d2a02f92-9826-4117-ae36-8fcfd72ad46e.woff" eot="06ebb3e2-5f11-4e26-8736-0f7acb3c7743.eot" ttf="d786d7d1-696a-47f9-9d03-7608fcb29cc4.ttf" svg="e7fe23f1-b364-4a20-905a-86ed7e89efae.svg" woff2="df119bf8-cb81-4373-9682-6054d9dd0770.woff2"/>
+<font displayName="Baskerville W01 Italic" psName="BaskervilleW01-Italic" FamilyName="Baskerville" FontWeight="400" FontStyle="italic" FontStretch="normal" CssFamilyName="L Baskerville W01" woff="11514d41-5158-4a68-8f27-9202cc7fc001.woff" eot="f0bf387a-6de1-402c-a63c-04664681e924.eot" ttf="b62c4ed0-7687-4a1b-840d-00a34f2d16a2.ttf" svg="ede983d0-3356-4a76-956b-4131479e2d55.svg" woff2="ed8ac168-5be2-4127-b1b2-976a1a017786.woff2"/>
+</fonts>
+
+*/

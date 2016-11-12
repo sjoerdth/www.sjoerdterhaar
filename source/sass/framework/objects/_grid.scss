@@ -1,0 +1,67 @@
+// clearfix
+@if $sb-use-grid == true {
+
+    .o-grid {
+
+    }
+
+    .o-grid--gutter {
+        margin-left: $sb-baseline * -1;
+
+        &.o-grid--modern {
+            > .o-grid__cell {
+                margin-left: $sb-baseline;
+            }
+        }
+
+        &.o-grid--classic {
+            > .o-grid__cell {
+                padding-left: $sb-baseline;
+            }
+        }
+
+    }
+
+    .o-grid--modern {
+        display: flex;
+        flex-direction: row;
+
+        &.o-grid--equal-cells {
+            .o-grid__cell {
+                flex: 1;
+            }
+        }
+
+        .o-grid__cell--flex {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .o-grid--modern-vertical-small {
+        @include media(null, $sb-breakpoint__small) {
+            flex-direction: column;
+
+            margin-left: 0;
+
+            .o-grid__cell {
+                margin-left: 0;
+                margin-bottom: $sb-baseline;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .o-grid--classic {
+        @extend .cf;
+
+        > .o-grid__cell {
+            float: left;
+        }
+    }
+
+} // /@if

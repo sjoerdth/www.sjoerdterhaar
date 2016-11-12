@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    $o-overlay
+\*------------------------------------*/
+/**
+    Put an element on top of another element along z-axis.
+
+    Default position bottom and full-width.
+
+    <div class="o-overlay">
+        <img src="http://www.placecage.com/1000/1414">
+        <div class="o-overlay__layer">
+
+        </div>
+    </div>
+
+*/
+
+
+
+
+.o-overlay {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+    .o-overlay__layer {
+        display: block;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        padding: $sb-baseline;
+    }
+
+    .o-overlay__layer--top {
+        top: 0;
+        bottom: auto;
+    }
+
+/**
+    Use overlay as click area
+
+    <div class="o-overlay">
+        <img src="http://www.placecage.com/1000/1414">
+        <a class="o-overlay__layer o-overlay__layer--area" href="#">
+            <span class="o-overlay__click-area-text">Read more ></span>
+        </a>
+    </div>
+
+*/
+
+    .o-overlay__layer--click-area {
+        top: 0;
+
+        padding: 0;
+
+        cursor: pointer;
+    }
+
+    .o-overlay__click-area-text {
+        margin-left: -9999em;
+    }

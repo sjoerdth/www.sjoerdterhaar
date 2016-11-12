@@ -1,0 +1,8 @@
+.o-drawer {
+    background: palette(brand-gold);
+}
+
+    .o-drawer__item {
+        border-right-color: palette(brand-gold, light);
+        color: palette(brand-white);
+    }

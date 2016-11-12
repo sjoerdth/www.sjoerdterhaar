@@ -1,0 +1,25 @@
+<perch:before>
+<ul class="listing">
+</perch:before>
+	<li class="author">
+		<perch:if exists="author_image">
+			<img src="<perch:news id="author_image" type="image" label="Image" width="240" height="240" crop="true" density="2" />" width="120" height="120" alt="<perch:news id="authorGivenName" type="text" label="Given name" /> <perch:news id="authorFamilyName" type="text" label="Given name" />" />
+		</perch:if>
+		<div class="author">
+			<h2>
+				<a href="/news/archive.php?author=<perch:news id="authorSlug" type="text" />">
+			    	<perch:news id="authorGivenName" type="text" label="Given name" /> 
+			    	<perch:news id="authorFamilyName" type="text" label="Given name" /> 
+				</a>
+				
+			</h2>
+
+			<perch:news id="author_biog" type="textarea" label="Biography" textile="true" editor="markitup" />
+
+			<p><a href="/news/archive.php?author=<perch:news id="authorSlug" type="text" />"><perch:news id="authorPostCount" /> 
+				<perch:if id="authorPostCount" match="gt" value="1">posts<perch:else />post</perch:if></a></p>
+		</div>
+	</li>
+<perch:after>
+</ul>
+</perch:after>

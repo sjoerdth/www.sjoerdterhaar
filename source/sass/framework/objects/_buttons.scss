@@ -1,0 +1,81 @@
+/***
+    [#BUTTONS]
+***/
+.o-button {
+    display: inline-block;
+
+    padding: ($sb-baseline / 2) ($sb-baseline / 2);
+    outline: none;
+    border: 0;
+
+    border-radius: $sb-border-radius;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: inherit;
+
+    transition: all .25s ease;
+
+    &:active
+    {
+        //transform: scale(.97);
+    }
+}
+
+.o-button--disabled {
+    cursor: text;
+    opacity: 0.75;
+    &:hover {
+        box-shadow: none !important;
+    }
+    &:active {
+        //background: red !important;
+    }
+}
+
+.o-button--fancy {
+    &:hover {
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+        box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.o-button--tiny {
+    line-height: 1;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.o-button--big {
+    line-height: $sb-baseline * 2;
+}
+
+.o-button--huge {
+    @extend .hecto;
+    line-height: $sb-baseline * 3;
+}
+
+.o-button--full {
+    width: 100%;
+}
+
+.o-button--stand-alone {
+    display: block;
+    clear: both;
+}
+
+.o-button--pill {
+    border-radius: 1000px;
+}
+
+.o-button--sharp {
+    border-radius: 0;
+}
+
+.o-button--evolve {
+    font-size:inherit;
+    line-height:inherit;
+}

@@ -1,0 +1,27 @@
+.m-article {
+    margin-bottom: $sb-baseline;
+}
+
+    .m-article--body {
+        padding: $sb-baseline;
+        border-left: 5px solid palette(brand-pink);
+
+        background: white;
+    }
+
+    .m-article--date {
+        padding-right: $sb-baseline;
+        padding-left: $sb-baseline;
+
+        color: white;
+
+        background: palette(brand-pink);
+    }
+
+    .m-article--tags {
+        padding: $sb-baseline/2 $sb-baseline;
+
+        font-size: 1rem;
+
+        background: palette(brand-orange);
+    }

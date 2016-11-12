@@ -1,0 +1,21 @@
+.m-wrapper {
+    width: 100%;
+    margin: auto;
+}
+
+.m-wrapper--constrain {
+    max-width: $max-page-width;
+}
+
+.m-wrapper--push-up {
+    margin-top: -$sb-baseline*2;
+}
+
+.m-wrapper--soft-sides {
+    padding-right: $sb-baseline;
+    padding-left: $sb-baseline;
+}
+
+.m-wrapper--shadow {
+    box-shadow: $base-shadow;
+}

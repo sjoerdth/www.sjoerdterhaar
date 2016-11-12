@@ -1,0 +1,32 @@
+/***
+
+    Uncomment and change value to overwrite default values
+
+***/
+
+/***
+    [#BASELINE]
+    Documentation -> addon/baseline
+***/
+
+$sb-use-media: true;
+
+/* Set (body copy) font-size */
+$sb-fontsize: 1.4rem;
+
+//$sb-fontsize-h: 1rem;
+
+/* Set baseline (= $sb-fontsize * $sb-lineheight) height for vertical rhythm */
+//$sb-lineheight: 1.4;
+
+$sb-border-radius: 3px;
+
+// Custom vars:
+$max-page-width: 1300px;
+
+$masthead-height: 45vh;
+$masthead-height--small: 75vh;
+
+$scroll-down-button-size: 40px;
+
+$base-shadow: 2px 2px 3px 0 rgba(0,0,0,0.1)

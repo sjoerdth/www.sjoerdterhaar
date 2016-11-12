@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    MOBILE ACTION DRAWER
+\*------------------------------------*/
+
+$drawer-height: $sb-baseline *3;
+
+.o-drawer {
+    display: none;
+
+    @include media(null, $sb-breakpoint__small) {
+        //display: flex;
+    }
+    position: fixed;
+    z-index: z("palm");
+    bottom: 0;
+
+    align-items: stretch;
+
+    width: 100%;
+    height: $drawer-height;
+
+    box-shadow: 0 0 0 1px rgba(127, 127, 127, .55);
+}
+
+.o-drawer__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    height: 100%;
+
+    border-right: 1px solid white;
+
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:last-child {
+        border-right: 0;
+    }
+}

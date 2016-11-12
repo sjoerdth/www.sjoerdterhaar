@@ -1,0 +1,32 @@
+.m-price-table {
+    width: 100%;
+
+    border-collapse: collapse;
+    margin-bottom: $sb-baseline;
+
+    tr {
+        &:last-child {
+            td {
+                border: 0;
+            }
+        }
+    }
+
+    td {
+        padding: $sb-baseline / 2 $sb-baseline / 2 $sb-baseline / 2 0;
+        border-bottom: 1px solid palette(brand-grey, x-light);
+    }
+}
+
+    .m-price-table__item {
+
+    }
+
+    .m-price-table__price {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .m-price-table__additional {
+
+    }

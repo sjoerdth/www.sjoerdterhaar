@@ -1,0 +1,64 @@
+.m-nav-touch {
+    display: none;
+    @extend .cf;
+
+    @include media(null, $sb-breakpoint__small) {
+        display: block;
+        position: fixed;
+        z-index: z(nav);
+
+        bottom: $sb-baseline;
+        right: $sb-baseline;
+    }
+
+}
+
+.m-nav-touch--over-nav {
+
+    @include media(null, $sb-breakpoint__small) {
+        display: none;
+        z-index: z(overlay)+1;
+
+        &.m-nav-touch--over-nav--active {
+            display: block;
+        }
+    }
+}
+
+.m-nav-touch--inactive {
+    @include media(null, $sb-breakpoint__small) {
+        display: none;
+    }
+}
+
+    .m-nav-touch__item {
+        @include media(null, $sb-breakpoint__small) {
+            position: relative;
+            display: block;
+            float: right;
+            margin-left: $sb-baseline / 2;
+
+            height: 60px;
+            width: 60px;
+
+            text-align: center;
+            border-radius: 50%;
+            //background: palette(brand-first);
+            box-shadow: 1px 1px 2px 0 rgba(black, 0.75);
+
+            &:hover,
+            &:active {
+                box-shadow: inset 1px 1px 4px 0 rgba(black, 0.75);
+            }
+        }
+    }
+
+    .m-nav-touch__action {
+        @include media(null, $sb-breakpoint__small) {
+            @include vertical-align();
+
+            background: none;
+            outline: none;
+            border: none;
+        }
+    }

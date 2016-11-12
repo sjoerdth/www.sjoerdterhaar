@@ -1,0 +1,26 @@
+.o-breadcrumb {
+    text-align: center;
+}
+
+
+.o-breadcrumb__item {
+    &:after {
+        content: "/";
+        color: palette(brand-gold);
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.o-breadcrumb__item--active {
+    font-weight: bold;
+}
+
+.o-breadcrumb__link {
+    text-decoration: none;
+    color: palette(brand-grey);
+}

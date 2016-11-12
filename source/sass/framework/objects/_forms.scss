@@ -1,0 +1,27 @@
+.o-form-element {
+    border-radius: $sb-border-radius;
+    border: 1px solid;
+    padding: ($sb-baseline / 4) ($sb-baseline / 4);
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+}
+
+.o-form-element--size-full {
+    width: 100%;
+}
+
+input
+{
+
+}
+
+select
+{
+
+}
+
+textarea
+{
+
+}

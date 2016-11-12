@@ -1,0 +1,19 @@
+.o-notification-box {
+    position:fixed;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    background: #bbe1fb;
+    padding: $sb-baseline / 2;
+    text-align: center;
+    display: none;
+    &--success {
+        background: #c5f0b0;
+    }
+    &--warning {
+        background: #fce48f;
+    }
+    &--error {
+        background: #ff6c5f;
+    }
+}

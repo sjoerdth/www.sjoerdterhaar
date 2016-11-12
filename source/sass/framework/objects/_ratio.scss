@@ -1,0 +1,75 @@
+/*
+
+<div class="o-ratio">
+    <div class="o-ratio__size o-ratio__size--golden">
+        <div class="o-ratio__content">
+            <img src="http://www.placecage.com/1000/1414">
+        </div>
+    </div>
+</div>
+
+*/
+
+.o-ratio {
+    width: 100%;
+}
+
+    .o-ratio__size {
+        position: relative;
+        width: 100%;
+    }
+
+    // square
+    .o-ratio__size--1-1,
+    .o-ratio__size--square {
+        @include ratio(1, 1);
+    }
+
+    // video, still
+    .o-ratio__size--4-3 {
+        @include ratio(4, 3);
+    }
+
+    // video, still
+    .o-ratio__size--16-9 {
+        @include ratio(16, 9);
+    }
+
+    // video
+    .o-ratio__size--21-9 {
+        @include ratio(21, 9);
+    }
+
+    // golden
+    .o-ratio__size--golden {
+        @include ratio(1.6180, 1);
+    }
+
+    // international standard paper size A
+    .o-ratio__size--iso-a-landscape {
+        @include ratio(1.4142, 1);
+    }
+
+    .o-ratio__size--iso-a-portrait {
+        @include ratio(1, 1.4142);
+    }
+
+    // content holder
+    .o-ratio__content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    // in combination with 1:1
+    .o-ratio__content--cirlce {
+        border-radius: 50%;
+        background: white;
+    }
+
+    .o-ratio__media {
+        width: 100%;
+    }

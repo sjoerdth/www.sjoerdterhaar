@@ -1,0 +1,28 @@
+.m-scroll-down {
+    display: block;
+
+    position: absolute;
+    top: calc( #{$masthead-height} - ( #{$sb-baseline} + #{$scroll-down-button-size} ) );
+    left: calc(50% - (#{$scroll-down-button-size} / 2 ) );
+
+    height: $scroll-down-button-size;
+    width: $scroll-down-button-size;
+
+    border-radius: 50%;
+    border: 2px solid white;
+
+    @include media(null, $sb-breakpoint__small) {
+        top: calc( #{$masthead-height} - ( #{$sb-baseline} + #{$scroll-down-button-size} ) - #{$drawer-height} );
+    }
+}
+
+.m-scroll-down--small {
+    top: calc( #{$masthead-height--small} - ( #{$sb-baseline} + #{$scroll-down-button-size} ) );
+}
+
+    .m-scroll-down__body {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }

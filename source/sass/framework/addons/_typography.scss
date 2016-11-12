@@ -1,0 +1,141 @@
+/*
+    Calculate header sizes and create classes similair to header tags.
+    EG
+    <h1> -> .h1
+*/
+
+/*  Calculate header font-size using $sb-fontsize & $sb-ratio,
+    also set default margin-bottom of al headers to $sb-baseline (because it's
+    easy) */
+
+$sb-ratio--exp: $sb-ratio;
+
+// Set unit for calculating  h1 / h3
+$font-size-inc: $sb-ratio;
+
+// Set unit for calculating  h5 / h6
+$font-size-dec: $sb-ratio;
+
+@for $i from 1 through 6 {
+  @if $i >= 4  { // 6, 5, 4 (h1 h2 h3)
+    h#{7 - $i}, .h#{7 - $i} {
+        font-size: $sb-fontsize-h * $font-size-inc;
+        margin-bottom: $sb-baseline;
+    }
+    $font-size-inc: $font-size-inc * $sb-ratio;
+  } @else if $i == 3 { // 3 (h4)
+    h#{7 - $i}, .h#{7 - $i} {
+        font-size: $sb-fontsize-h;
+        margin-bottom: $sb-baseline;
+    }
+  } @else if $i <= 2 { // 2, 1 (h5 h6)
+    h#{4 + $i}, .h#{4 + $i} {
+        font-size: $sb-fontsize-h / $font-size-dec;
+        margin-bottom: $sb-baseline;
+    }
+    $font-size-dec: $font-size-dec * $sb-ratio;
+  }
+};
+
+/*
+    Get classnames for bigger than bodyfont based on metric
+    system, ascending: .deca, .hecto, .kilo, .mega, .giga, .tera.
+*/
+
+$sb-fontsize__big: (
+    deca,
+    hecto,
+    kilo,
+    mega,
+    giga,
+    tera
+);
+
+$sb-ratio--exp: $sb-ratio;
+@for $i from 1 through length($sb-fontsize__big) {
+
+    $sb-fontclassname: nth($sb-fontsize__big, $i);
+
+    .#{$sb-fontclassname} {
+        font-size: $sb-fontsize * $sb-ratio--exp;
+    }
+    $sb-ratio--exp: $sb-ratio--exp * $sb-ratio;
+}
+
+/*
+    Get classnames for smaller than bodyfont based on metric
+    system, descending: .deci, .centi, .milli, .micro, .nano, .pico
+*/
+
+$sb-fontsize__small: (
+    deci,
+    centi,
+    milli,
+    micro,
+    nano,
+    pico
+);
+
+$sb-ratio--exp: $sb-ratio;
+@for $i from 1 through length($sb-fontsize__small) {
+
+    $sb-fontclassname: nth($sb-fontsize__small, $i);
+
+    .#{$sb-fontclassname} {
+        font-size: $sb-fontsize / $sb-ratio--exp;
+    }
+    $sb-ratio--exp: $sb-ratio--exp * $sb-ratio;
+}
+/*
+    Remove padding from all <p> that are last child
+*/
+p {
+    margin-bottom: $sb-baseline;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*
+    Drop cap
+*/
+.drop-cap {
+    >p:first-child {
+        &:first-letter {
+            float: left;
+            line-height: $sb-baseline * 2;
+            font-size: $sb-fontsize * 3;
+            margin-right: 2px;
+        }
+    }
+}
+
+/*
+    First line emphasis
+*/
+.first-line-em {
+    >p:first-child {
+        &:first-line {
+            font-weight: bold;
+        }
+    }
+}
+
+/*
+    Set quotes
+*/
+q,
+blockquote {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before,
+blockquote:before {
+    content: open-quote;
+}
+
+q:after,
+blockquote:after {
+    content: close-quote;
+}

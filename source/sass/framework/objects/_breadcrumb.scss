@@ -1,0 +1,31 @@
+.o-breadcrumb {
+    margin-bottom: $sb-baseline;
+
+    list-style: none;
+    font-size: 1rem;
+    white-space: nowrap;
+
+    @media (max-width: $sb-breakpoint__small) {
+        white-space: normal;
+    }
+
+    li {
+        display: inline;
+    }
+}
+
+    //.o-breadcrumb__link {
+    //    font-weight: bold;
+    //    text-decoration: none;
+    //}
+
+
+    .o-breadcrumb__name {
+        text-decoration: underline;
+    }
+
+    .o-breadcrumb__name--active {
+        font-weight: normal;
+        text-decoration: none;
+        cursor: default;
+    }

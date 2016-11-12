@@ -1,0 +1,26 @@
+<perch:before>
+<ul class="hfeed listing"></perch:before>
+    <li class="hentry">
+        <h2><a href="<perch:news id="postURL" />" rel="bookmark" class="entry-title"><perch:news id="postTitle" /></a></h2>
+        <perch:if exists="image"><img src="<perch:news id="image" type="image" width="50" height="50" crop="true" />" alt="<perch:news id="postTitle" />" /></perch:if>
+        <p class="entry-published date"><perch:news id="postDateTime" format="%d %B %Y" /></p>
+        <div class="description entry-summary">
+        <perch:news id="excerpt" type="textarea" textile="true" />
+        <p>Comments: <perch:news id="postCommentCount"/></p>
+        </div>
+    </li>
+<perch:after>
+    </ul>
+    <perch:if exists="paging">
+        <div class="paging">
+            Page <perch:news id="current_page" /> of <perch:news id="number_of_pages" />
+            <perch:news id="page_links" encode="false" />
+            <perch:if exists="not_first_page">
+                <a href="<perch:news id="prev_url" encode="false" />">Previous</a>
+            </perch:if>
+            <perch:if exists="not_last_page">
+                <a href="<perch:news id="next_url" encode="false" />">Next</a>
+            </perch:if>
+        </div>
+    </perch:if>
+</perch:after>

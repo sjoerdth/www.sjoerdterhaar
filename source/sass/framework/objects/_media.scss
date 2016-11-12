@@ -1,0 +1,75 @@
+@if $sb-use-media == true{
+
+/*------------------------------------*\
+    $o-media
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-o-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class=o-media>
+       <img src=http://placekitten.com/200/300 alt="" class=o-media__img>
+       <p class=o-media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+.o-media {
+    display: flex;
+}
+
+.o-media--center {
+    align-items: center;
+}
+
+/**
+ * Reversed image location (left instead of right).
+ */
+.o-media--rev {
+    flex-direction: row-reverse;
+
+    .o-media__body {
+        padding-right: 0;
+        padding-left: $sb-baseline / 2;
+    }
+
+    .o-media__img {
+        padding-right: $sb-baseline / 2;
+        padding-left: 0;
+    }
+}
+
+.o-media--stacked {
+    flex-direction: column;
+
+    .o-media__body {
+        padding: $sb-baseline;
+    }
+
+    .o-media__img {
+        padding: 0;
+    }
+}
+
+.o-media--stacked-rev {
+    flex-direction: column-reverse;
+}
+
+    .o-media__body {
+        padding-right: $sb-baseline / 2;
+        >&:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .o-media__img {
+        text-align: center;
+        padding-left: $sb-baseline / 2;
+    }
+
+
+
+}//endif

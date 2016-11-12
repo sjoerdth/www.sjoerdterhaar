@@ -1,0 +1,43 @@
+body {
+    background: palette(grey, x-light);
+    color: palette(grey, dark);
+
+    @include media(null, $sb-breakpoint__small) {
+
+    }
+
+	// create breakpoints for use in JS
+	&:after {
+		@include media(null, $sb-breakpoint__small) {
+			content: "bp-small";
+			display: none;
+		}
+		@include media($sb-breakpoint__small, null) {
+			content: "bp-up-from-small";
+			display: none;
+		}
+	}
+}
+
+a {
+    color: palette(brand-pink);
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: palette(brand-pink, dark);
+    }
+    //
+    //&:visited {
+    //    color: palette(brand-pink, x-dark);
+    //}
+}
+
+::selection {
+    background: palette(brand-pink);
+    color: white;
+}
+
+.contrast-light {
+    background: palette( brand-beige );
+}

@@ -1,0 +1,87 @@
+/**
+ * FROM INUIT CSS
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+/***
+    MEDIA QUERY
+
+    min-width and max-width:
+    @include media($sb-breakpoint__small, $sb-breakpoint__large) {
+      color: red;
+    }
+
+    min-width
+    @include media($sb-breakpoint__small, null) {
+      color: red;
+    }
+
+    max-width
+    @include media(null, $sb-breakpoint__large) {
+      color: red;
+    }
+***/
+@mixin media($min: null, $max: null){
+    @if $min != null and $max != null {
+        @media only screen and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if  $min == null and $max != null {
+        @media only screen and (max-width: $max) {
+            @content;
+        }
+    } @else if  $min != null and $max == null {
+        @media only screen and (min-width: $min) {
+            @content;
+        }
+    }
+};
+
+/***
+    CENTER VERTICALLY
+
+    .element {
+        @include vertical-align();
+    }
+
+***/
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/***
+    CENTER HORIZONTALLY
+
+    .element {
+        @include horizontal-align();
+    }
+
+***/
+@mixin horizontal-align($position: relative) {
+    position: $position;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/***
+    calculate padding-bottom for aspect ratio
+
+    .element {
+        @include ratio(4, 3);
+    }
+***/
+@mixin ratio($ratio__width, $ratio__height) {
+    padding-bottom: 100% / $ratio__width * $ratio__height;
+}

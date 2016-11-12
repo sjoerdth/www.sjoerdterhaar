@@ -1,0 +1,34 @@
+/*
+ *
+ */ 
+
+@if $sb-use-font-face == true {
+
+    @each $font-family, $font-style in $font-families {
+
+        // name used in css
+        $style-name: map-get($font-style, style-name);
+        // path to default fonts folder
+        $path: map-get($font-style, path);
+        // specific font folder
+        $folder: map-get($font-style, folder);
+        // font filename without extension
+        $file-name: map-get($font-style, file-name);
+        // font-weight
+        $font-weight: map-get($font-style, font-weight);
+        //font-style
+        $font-style: map-get($font-style, font-style);
+
+        @font-face {
+            font-family: '#{$style-name}';
+            src:    url('#{$path}/#{$folder}/#{$file-name}.eot');
+            src:    url('#{$path}/#{$folder}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
+                    url('#{$path}/#{$folder}/#{$file-name}.woff2') format('woff2'),
+                    url('#{$path}/#{$folder}/#{$file-name}.woff') format('woff'),
+                    url('#{$path}/#{$folder}/#{$file-name}.ttf') format('truetype'),
+                    url('#{$path}/#{$folder}/#{$file-name}.svg##{$style-name}') format('svg');
+            font-weight: $font-weight;
+            font-style: $font-style;
+        }
+    };
+};

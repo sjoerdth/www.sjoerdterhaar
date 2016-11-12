@@ -1,0 +1,33 @@
+.o-media--palm {
+    @include media(null, $sb-breakpoint__small) {
+        flex-direction: column;
+
+        .o-media__img {
+            order: 1;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .o-media__body {
+            order: 2;
+        }
+    }
+}
+
+    .o-media__body--soft-sides {
+        padding-left: $sb-baseline;
+    }
+
+.o-media--rev {
+    .o-media__body--soft-sides {
+        padding-right: $sb-baseline;
+        padding-left: $sb-baseline / 2;
+    }
+}
+
+.o-media__body,
+.o-media__body--soft-sides {
+    @include media(null, $sb-breakpoint__small) {
+        padding: $sb-baseline;
+    }
+}

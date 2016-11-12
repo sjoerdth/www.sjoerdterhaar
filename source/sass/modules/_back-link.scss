@@ -1,0 +1,20 @@
+.m-back-link {
+    background: palette(brand-blue);
+}
+
+    .m-back-link__link {
+        height: 100%;
+        padding-right: $sb-baseline;
+        padding-left: $sb-baseline;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: white;
+            background: rgba(white, 0.2);
+        }
+    }
+
+    .m-back-link__body {
+        display: block;
+    }

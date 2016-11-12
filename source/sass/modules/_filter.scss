@@ -1,0 +1,44 @@
+.m-filter {
+    padding: $sb-baseline;
+
+    color: white;
+    //background: rgba( palette(brand-second), 0.9 );
+
+    @include media(null, $sb-breakpoint__small) {
+        display: none;
+    }
+
+    a {
+        color: white;
+    }
+
+
+    .m-filter__ingredient--inactive {
+      opacity: 0.5;
+
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+    .m-filter__category-block {
+        margin-bottom: $sb-baseline;
+    }
+
+    .m-filter__category-name {
+        margin-bottom: $sb-baseline / 2;
+        font-size: 1.2em;
+    }
+
+    .m-filter__product-list {
+        > li {
+            position: relative;
+
+            padding-left: $sb-baseline / 2;
+        }
+    }
+
+    .m-filter__item--inactive {
+        display: none;
+    }

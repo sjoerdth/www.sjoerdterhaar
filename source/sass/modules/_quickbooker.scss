@@ -1,0 +1,41 @@
+.m-quickbooker {
+    padding: $sb-baseline / 2;
+    text-transform: uppercase;
+
+    color: palette(brand-white);
+
+    @include media(null, $sb-breakpoint__small) {
+        //default hide on mobile devices
+        //display: none;
+
+        position: fixed;
+        z-index: z("palm") + 1;
+        bottom: 5.04rem;
+        left: 0;
+
+        width: 100vw;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0s, opacity 0.5s;
+        background: palette(brand-grey);
+    }
+}
+
+.m-quickbooker--mobile-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.m-quickbooker__list {
+    list-style: none;
+
+    li {
+        margin-bottom: $sb-baseline / 2;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

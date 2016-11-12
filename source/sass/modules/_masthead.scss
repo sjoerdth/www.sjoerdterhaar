@@ -1,0 +1,32 @@
+.m-masthead {
+    height: $masthead-height;
+
+    margin-bottom: $sb-baseline;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+.m-masthead--small {
+    height: $masthead-height--small;
+}
+
+.m-masthead--placeholder {
+    height: 175px;
+    min-height: auto;
+}
+
+.m-masthead__image-box {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.m-masthead__image {
+    display: none !important;
+}

@@ -1,0 +1,20 @@
+.m-social {
+
+}
+
+.m-social__label {
+    display: none;
+}
+
+.m-social__item {
+    display: block;
+
+    height: 3rem;
+    width: 3rem;
+
+    border: 1px solid palette(brand-white);
+
+    &:hover {
+        background: palette(brand-gold);
+    }
+}

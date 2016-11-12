@@ -1,0 +1,26 @@
+.m-search-suggestions {
+    position: absolute;
+    z-index: 1000;
+
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    padding: $sb-baseline / 2;
+
+    color: palette(grey, x-dark);
+    background: white;
+    box-shadow: 3px 3px 7px 0 rgba(black, 0.25);
+}
+
+    .m-search-suggestions__suggestion {
+        margin-bottom: $sb-baseline / 2;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .m-search-suggestions__description {
+        color: palette(grey, x-dark) !important;
+    }

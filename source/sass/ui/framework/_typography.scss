@@ -1,0 +1,146 @@
+$body-stack: Roboto, arial, sans-serif;
+$header-stack: Cardo, tahoma, serif;
+
+html {
+    font-size: 100%;
+
+    @include media(null, $sb-breakpoint__small) {
+        font-size: 85%;
+    }
+
+}
+
+body {
+    font-family: $body-stack;
+    font-size: $sb-fontsize;
+    line-height: $sb-baseline;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $header-stack;
+
+    &--body-font {
+        font-family: $body-stack;
+    }
+
+    &--dia-pos {
+        color: white;
+    }
+
+    &--dia-neg {
+        color: palette(brand-black, light);
+    }
+
+}
+
+h1, .h1,
+h2, .h2 {
+    text-align: center;
+}
+
+.tera,
+.giga,
+.mega,
+.kilo,
+.hecto,
+.deca,
+.base {
+    font-family: $header-stack;
+    font-weight: normal;
+}
+
+.tera--sub,
+.giga--sub,
+.mega--sub,
+.kilo--sub,
+.hecto--sub,
+.deca--sub,
+.base--sub {
+    font-weight: normal;
+}
+
+
+h1, .h1, .tera {
+    line-height: $sb-baseline * 2;
+}
+h2, .h2, .giga {
+    line-height: $sb-baseline * 2;
+}
+h3, .h3, .mega {
+    line-height: $sb-baseline * 1.25;
+}
+h4, .h4, .kilo {
+    line-height: $sb-baseline * 1.25;
+}
+h5, .h5, .hecto {
+    line-height: $sb-baseline * 2;
+}
+h6, .h6, .deca {
+    line-height: $sb-baseline * 1.5;
+}
+
+
+/*
+    constrain text width:
+    "Robert Bringhurst puts a good measure at somewhere between 45 and 75 characters."
+    http://www.smashingmagazine.com/2011/11/29/the-perfect-paragraph/
+*/
+.text-constrain {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 40rem;
+    @extend .cf;
+}
+
+/*
+    Drop cap
+*/
+.drop-cap {
+    >p:first-child {
+        &:first-letter {
+            color: palette(brand-pink);
+        }
+    }
+}
+
+blockquote {
+    position: relative;
+
+    margin: $sb-baseline $sb-baseline $sb-baseline $sb-baseline*2;
+
+    padding: $sb-baseline;
+    border: 1px solid palette(grey, x-light);
+    border-left: 10px solid palette(brand-blue);
+
+    font-style: italic;
+    font-size: 1.2rem;
+
+    border-radius: $sb-border-radius;
+    box-shadow: $base-shadow;
+
+    &:before {
+        position: absolute;
+        left: -$sb-baseline*2;
+
+        font-size: 5rem;
+        color: palette(brand-blue);
+    }
+    &:after {
+        display: none;
+    }
+}
+
+
+.subheading {
+    display: block;
+
+    margin-bottom: $sb-baseline;
+
+    text-align: center;
+    color: palette(grey);
+}

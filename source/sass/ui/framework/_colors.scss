@@ -1,0 +1,111 @@
+/*
+*   http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+
+x-dark
+dark *
+mid-dark
+base (default)
+mid-light
+light *
+x-light
+
+a {
+    color: palette(purple);
+    &:hover {
+        color: palette(purple, light);
+    }
+}
+
+*/
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// Brand colors
+$color__brand--pink:    rgb(255, 23, 155);
+$color__brand--beige:   rgb(248, 240, 232);
+$color__brand--blue:   rgb(20, 188, 204);
+$color__brand--orange:   rgb(255, 197, 23);
+$color__brand--grey:    rgb(89, 86, 87);
+$color__brand--black:   rgb(0, 0, 0);
+$color__brand--white:   rgb(255, 255, 255);
+
+// Default colors
+$color__default--grey:   rgb(127, 127, 127);
+
+
+$palettes: (
+    brand-pink: (
+        x-light     : lighten($color__brand--pink, 30%),
+        light       : lighten($color__brand--pink, 20%),
+        mid-light   : lighten($color__brand--pink, 10%),
+        base        : $color__brand--pink,
+        mid-dark    : darken($color__brand--pink, 10%),
+        dark        : darken($color__brand--pink, 20%),
+        x-dark      : darken($color__brand--pink, 30%)
+    ),
+    brand-beige: (
+            x-light     : lighten($color__brand--beige, 30%),
+            light       : lighten($color__brand--beige, 20%),
+            mid-light   : lighten($color__brand--beige, 10%),
+            base        : $color__brand--beige,
+            mid-dark    : darken($color__brand--beige, 10%),
+            dark        : darken($color__brand--beige, 20%),
+            x-dark      : darken($color__brand--beige, 30%)
+    ),
+    brand-blue: (
+            x-light     : lighten($color__brand--blue, 30%),
+            light       : lighten($color__brand--blue, 20%),
+            mid-light   : lighten($color__brand--blue, 10%),
+            base        : $color__brand--blue,
+            mid-dark    : darken($color__brand--blue, 10%),
+            dark        : darken($color__brand--blue, 20%),
+            x-dark      : darken($color__brand--blue, 30%)
+    ),
+    brand-orange: (
+            x-light     : lighten($color__brand--orange, 30%),
+            light       : lighten($color__brand--orange, 20%),
+            mid-light   : lighten($color__brand--orange, 10%),
+            base        : $color__brand--orange,
+            mid-dark    : darken($color__brand--orange, 10%),
+            dark        : darken($color__brand--orange, 20%),
+            x-dark      : darken($color__brand--orange, 30%)
+    ),
+    brand-grey: (
+        x-light     : lighten($color__brand--grey, 40%),
+        light       : lighten($color__brand--grey, 20%),
+        mid-light   : lighten($color__brand--grey, 10%),
+        base        : $color__brand--grey,
+        mid-dark    : darken($color__brand--grey, 10%),
+        dark        : darken($color__brand--grey, 20%),
+        x-dark      : darken($color__brand--grey, 35%)
+    ),
+    brand-black: (
+            x-light     : lighten($color__brand--black, 40%),
+            light       : lighten($color__brand--black, 20%),
+            mid-light   : lighten($color__brand--black, 10%),
+            base        : $color__brand--black,
+            mid-dark    : darken($color__brand--black, 10%),
+            dark        : darken($color__brand--black, 20%),
+            x-dark      : darken($color__brand--black, 35%)
+    ),
+    brand-white: (
+            x-light     : lighten($color__brand--white, 40%),
+            light       : lighten($color__brand--white, 20%),
+            mid-light   : lighten($color__brand--white, 10%),
+            base        : $color__brand--white,
+            mid-dark    : darken($color__brand--white, 10%),
+            dark        : darken($color__brand--white, 20%),
+            x-dark      : darken($color__brand--white, 35%)
+    ),
+    grey: (
+        x-light     : lighten($color__default--grey, 40%),
+        light       : lighten($color__default--grey, 20%),
+        mid-light   : lighten($color__default--grey, 10%),
+        base        : $color__default--grey,
+        mid-dark    : darken($color__default--grey, 10%),
+        dark        : darken($color__default--grey, 20%),
+        x-dark      : darken($color__default--grey, 35%)
+    )
+);

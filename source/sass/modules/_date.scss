@@ -1,0 +1,28 @@
+.m-date {
+    display: block;
+
+    font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.m-date--muted {
+    color: palette(grey, light);
+    font-size: 1rem;
+}
+
+    .m-date__item {
+        display: inline-block;
+    }
+
+    .m-date__item--sinlge-line {
+        display: block;
+    }
+
+    .m-date__month {
+        display: block;
+    }
+
+    .m-date__day {
+        display: block;
+    }

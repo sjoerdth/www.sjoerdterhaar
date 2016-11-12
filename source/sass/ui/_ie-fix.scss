@@ -1,0 +1,102 @@
+// IE10 and IE11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    /***
+        MASTHEAD FIXES
+    **/
+    //// Center photo
+    //.m-masthead {
+    //    text-align: center;
+    //}
+    //
+    //// reset image styles to center photo
+    //.m-masthead__image {
+    //    display: inline-block !important;
+    //    width: auto;
+    //}
+
+}
+
+.ie--lt-ten {
+
+    /***
+        MASTHEAD FIXES
+    **/
+    //.m-masthead {
+    //    text-align: center;
+    //}
+    //
+    //// reset image styles to center photo
+    //.m-masthead__image {
+    //    top: 0;
+    //    display: inline-block;
+    //    width: auto;
+    //}
+
+    // Fix caption width to center caption
+    .o-caption__body--masthead {
+        width: 600px;
+        margin-left: -300px;
+    }
+
+    /***
+        FLEXBOX FIXES
+    ***/
+
+    // Set flexbox in navigation to display inline-block
+    .o-nav {
+        display: block;
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    // Convert flex-box based grid to display table & cells to table-cell
+    .o-grid--modern {
+        display: table;
+        width: 100%;
+
+        > .o-grid__cell {
+            display: table-cell;
+
+            padding-left: $sb-baseline;
+            vertical-align: top;
+        }
+
+    }
+
+    .o-grid--footer {
+        > .o-grid__cell {
+            width: 25%;
+        }
+    }
+
+    .m-social-feed__item {
+        background: none;
+    }
+
+    .m-social-feed__item--text-only {
+
+        .m-social-feed__overlay {
+            position: static;
+            background: white;
+            height: 100%;
+        }
+
+    }
+
+    //  media fixes
+    .o-media {
+        display: table;
+
+        .o-media__body,
+        .o-media__img {
+            display: table-cell;
+
+            vertical-align: top;
+        }
+    }
+}
+
