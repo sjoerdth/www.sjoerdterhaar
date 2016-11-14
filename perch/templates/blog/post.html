@@ -1,0 +1,48 @@
+<h1>
+    <perch:blog id="postTitle" type="text" label="Blog Title" required="true" size="xl autowidth" order="1" />
+</h1>
+<perch:if exists="blogPostSubtitle">
+<span class="subheading h3">
+    <perch:blog id="blogPostSubtitle" type="text" label="Blog Subtitle" size="xl autowidth" order="2" />
+</span>
+</perch:if>
+
+<perch:blocks>
+
+    <perch:block label="Plain text with dropcap" type="b_plainTextDropcap">
+        <div class="drop-cap">
+            <perch:blog id="c_plainTextDropcap" label="Plain text with dropcap" type="textarea" editor="tinymce" html="true" />
+        </div>
+    </perch:block>
+
+    <perch:block label="Plain text" type="b_plainText">
+        <perch:blog id="c_plainText" label="Plain text" type="textarea" editor="tinymce" html="true" />
+    </perch:block>
+
+    <perch:block label="Blockquote" type="b_blockquote">
+        <perch:template path="blog/blocks/blockquote.html" />
+    </perch:block>
+
+    <perch:block label="Media - text | image" type="b_mediaTextImage">
+        <div class="o-media">
+            <div class="o-media__body col-1of2">
+                <perch:blog id="c_mediaTextLeft" label="Media text left" type="textarea" size="l" editor="tinymce" html="true" />
+            </div>
+            <div class="o-media__img col-1of2">
+                <img src="<perch:blog type="image" id="c_mediaImageRight" label="Media image right" />" alt="<perch:blog id="c_mediaImageRightAlt" label="Image alt" type="text" />">
+            </div>
+        </div>
+    </perch:block>
+
+    <perch:block label="Media - image | text" type="b_mediaImageText">
+        <div class="o-media o-media--rev">
+            <div class="o-media__body col-1of2">
+                <perch:blog id="c_mediaTextRight" label="Media text right" type="textarea" size="l" editor="tinymce" html="true" />
+            </div>
+            <div class="o-media__img col-1of2">
+                <img src="<perch:blog type="image" id="c_mediaImageLeft" label="Media image left" />" alt="<perch:blog id="c_mediaImageLeftAlt" label="Image alt" type="text" />">
+            </div>
+        </div>
+    </perch:block>
+
+</perch:blocks>

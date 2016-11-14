@@ -1,1 +1,1239 @@
-function hoteliers_form(e,t,n){var i=this;i.type="default",i.params={},i.params.ID=e,i.params.lang=t,i.options={form_class:"hoteliers-form__form",date_format:"dd.mm.yy",default_days:1,frame_width:1020,frame_height:"100%",use_inline_iframe:!1,packages:!1,rooms:!1,shownrofmonths:2,hoteliers_submit:"hf-checkform",hoteliers_arrival:"hf-arrivaldate",hoteliers_departure:"hf-departuredate",enable_onSiteOverlay:!1},jQuery.extend(i.options,n),i.init()}function scrollToAnchor(e){var t=$("a[name='"+e+"']");$("html,body").animate({scrollTop:t.offset().top},"slow")}window.Modernizr=function(e,t,n){function i(e){y.cssText=e}function o(e,t){return typeof e===t}function r(e,t){return!!~(""+e).indexOf(t)}function a(e,t){for(var i in e){var o=e[i];if(!r(o,"-")&&y[o]!==n)return"pfx"!=t||o}return!1}function s(e,t,i){for(var r in e){var a=t[e[r]];if(a!==n)return i===!1?e[r]:o(a,"function")?a.bind(i||t):a}return!1}function c(e,t,n){var i=e.charAt(0).toUpperCase()+e.slice(1),r=(e+" "+w.join(i+" ")+i).split(" ");return o(t,"string")||o(t,"undefined")?a(r,t):(r=(e+" "+b.join(i+" ")+i).split(" "),s(r,t,n))}var l,u,d,p="2.6.2",f={},h=!0,m=t.documentElement,v="modernizr",g=t.createElement(v),y=g.style,_=({}.toString," -webkit- -moz- -o- -ms- ".split(" ")),k="Webkit Moz O ms",w=k.split(" "),b=k.toLowerCase().split(" "),E={},j=[],C=j.slice,S=function(e,n,i,o){var r,a,s,c,l=t.createElement("div"),u=t.body,d=u||t.createElement("body");if(parseInt(i,10))for(;i--;)s=t.createElement("div"),s.id=o?o[i]:v+(i+1),l.appendChild(s);return r=["&#173;",'<style id="s',v,'">',e,"</style>"].join(""),l.id=v,(u?l:d).innerHTML+=r,d.appendChild(l),u||(d.style.background="",d.style.overflow="hidden",c=m.style.overflow,m.style.overflow="hidden",m.appendChild(d)),a=n(l,e),u?l.parentNode.removeChild(l):(d.parentNode.removeChild(d),m.style.overflow=c),!!a},M={}.hasOwnProperty;d=o(M,"undefined")||o(M.call,"undefined")?function(e,t){return t in e&&o(e.constructor.prototype[t],"undefined")}:function(e,t){return M.call(e,t)},Function.prototype.bind||(Function.prototype.bind=function(e){var t=this;if("function"!=typeof t)throw new TypeError;var n=C.call(arguments,1),i=function(){if(this instanceof i){var o=function(){};o.prototype=t.prototype;var r=new o,a=t.apply(r,n.concat(C.call(arguments)));return Object(a)===a?a:r}return t.apply(e,n.concat(C.call(arguments)))};return i}),E.touch=function(){var n;return"ontouchstart"in e||e.DocumentTouch&&t instanceof DocumentTouch?n=!0:S(["@media (",_.join("touch-enabled),("),v,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(e){n=9===e.offsetTop}),n},E.cssanimations=function(){return c("animationName")},E.csstransitions=function(){return c("transition")};for(var Q in E)d(E,Q)&&(u=Q.toLowerCase(),f[u]=E[Q](),j.push((f[u]?"":"no-")+u));return f.addTest=function(e,t){if("object"==typeof e)for(var i in e)d(e,i)&&f.addTest(i,e[i]);else{if(e=e.toLowerCase(),f[e]!==n)return f;t="function"==typeof t?t():t,"undefined"!=typeof h&&h&&(m.className+=" "+(t?"":"no-")+e),f[e]=t}return f},i(""),g=l=null,function(e,t){function n(e,t){var n=e.createElement("p"),i=e.getElementsByTagName("head")[0]||e.documentElement;return n.innerHTML="x<style>"+t+"</style>",i.insertBefore(n.lastChild,i.firstChild)}function i(){var e=g.elements;return"string"==typeof e?e.split(" "):e}function o(e){var t=v[e[h]];return t||(t={},m++,e[h]=m,v[m]=t),t}function r(e,n,i){if(n||(n=t),u)return n.createElement(e);i||(i=o(n));var r;return r=i.cache[e]?i.cache[e].cloneNode():f.test(e)?(i.cache[e]=i.createElem(e)).cloneNode():i.createElem(e),r.canHaveChildren&&!p.test(e)?i.frag.appendChild(r):r}function a(e,n){if(e||(e=t),u)return e.createDocumentFragment();n=n||o(e);for(var r=n.frag.cloneNode(),a=0,s=i(),c=s.length;a<c;a++)r.createElement(s[a]);return r}function s(e,t){t.cache||(t.cache={},t.createElem=e.createElement,t.createFrag=e.createDocumentFragment,t.frag=t.createFrag()),e.createElement=function(n){return g.shivMethods?r(n,e,t):t.createElem(n)},e.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+i().join().replace(/\w+/g,function(e){return t.createElem(e),t.frag.createElement(e),'c("'+e+'")'})+");return n}")(g,t.frag)}function c(e){e||(e=t);var i=o(e);return g.shivCSS&&!l&&!i.hasCSS&&(i.hasCSS=!!n(e,"article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}")),u||s(e,i),e}var l,u,d=e.html5||{},p=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,f=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,h="_html5shiv",m=0,v={};!function(){try{var e=t.createElement("a");e.innerHTML="<xyz></xyz>",l="hidden"in e,u=1==e.childNodes.length||function(){t.createElement("a");var e=t.createDocumentFragment();return"undefined"==typeof e.cloneNode||"undefined"==typeof e.createDocumentFragment||"undefined"==typeof e.createElement}()}catch(e){l=!0,u=!0}}();var g={elements:d.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",shivCSS:d.shivCSS!==!1,supportsUnknownElements:u,shivMethods:d.shivMethods!==!1,type:"default",shivDocument:c,createElement:r,createDocumentFragment:a};e.html5=g,c(t)}(this,t),f._version=p,f._prefixes=_,f._domPrefixes=b,f._cssomPrefixes=w,f.testProp=function(e){return a([e])},f.testAllProps=c,f.testStyles=S,f.prefixed=function(e,t,n){return t?c(e,t,n):c(e,"pfx")},m.className=m.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(h?" js "+j.join(" "):""),f}(this,this.document),function(e,t,n){function i(e){return"[object Function]"==v.call(e)}function o(e){return"string"==typeof e}function r(){}function a(e){return!e||"loaded"==e||"complete"==e||"uninitialized"==e}function s(){var e=g.shift();y=1,e?e.t?h(function(){("c"==e.t?p.injectCss:p.injectJs)(e.s,0,e.a,e.x,e.e,1)},0):(e(),s()):y=0}function c(e,n,i,o,r,c,l){function u(t){if(!f&&a(d.readyState)&&(_.r=f=1,!y&&s(),d.onload=d.onreadystatechange=null,t)){"img"!=e&&h(function(){w.removeChild(d)},50);for(var i in S[n])S[n].hasOwnProperty(i)&&S[n][i].onload()}}var l=l||p.errorTimeout,d=t.createElement(e),f=0,v=0,_={t:i,s:n,e:r,a:c,x:l};1===S[n]&&(v=1,S[n]=[]),"object"==e?d.data=n:(d.src=n,d.type=e),d.width=d.height="0",d.onerror=d.onload=d.onreadystatechange=function(){u.call(this,v)},g.splice(o,0,_),"img"!=e&&(v||2===S[n]?(w.insertBefore(d,k?null:m),h(u,l)):S[n].push(d))}function l(e,t,n,i,r){return y=0,t=t||"j",o(e)?c("c"==t?E:b,e,t,this.i++,n,i,r):(g.splice(this.i++,0,e),1==g.length&&s()),this}function u(){var e=p;return e.loader={load:l,i:0},e}var d,p,f=t.documentElement,h=e.setTimeout,m=t.getElementsByTagName("script")[0],v={}.toString,g=[],y=0,_="MozAppearance"in f.style,k=_&&!!t.createRange().compareNode,w=k?f:m.parentNode,f=e.opera&&"[object Opera]"==v.call(e.opera),f=!!t.attachEvent&&!f,b=_?"object":f?"script":"img",E=f?"script":b,j=Array.isArray||function(e){return"[object Array]"==v.call(e)},C=[],S={},M={timeout:function(e,t){return t.length&&(e.timeout=t[0]),e}};p=function(e){function t(e){var t,n,i,e=e.split("!"),o=C.length,r=e.pop(),a=e.length,r={url:r,origUrl:r,prefixes:e};for(n=0;n<a;n++)i=e[n].split("="),(t=M[i.shift()])&&(r=t(r,i));for(n=0;n<o;n++)r=C[n](r);return r}function a(e,o,r,a,s){var c=t(e),l=c.autoCallback;c.url.split(".").pop().split("?").shift(),c.bypass||(o&&(o=i(o)?o:o[e]||o[a]||o[e.split("/").pop().split("?")[0]]),c.instead?c.instead(e,o,r,a,s):(S[c.url]?c.noexec=!0:S[c.url]=1,r.load(c.url,c.forceCSS||!c.forceJS&&"css"==c.url.split(".").pop().split("?").shift()?"c":n,c.noexec,c.attrs,c.timeout),(i(o)||i(l))&&r.load(function(){u(),o&&o(c.origUrl,s,a),l&&l(c.origUrl,s,a),S[c.url]=2})))}function s(e,t){function n(e,n){if(e){if(o(e))n||(d=function(){var e=[].slice.call(arguments);p.apply(this,e),f()}),a(e,d,t,0,l);else if(Object(e)===e)for(c in s=function(){var t,n=0;for(t in e)e.hasOwnProperty(t)&&n++;return n}(),e)e.hasOwnProperty(c)&&(!n&&!--s&&(i(d)?d=function(){var e=[].slice.call(arguments);p.apply(this,e),f()}:d[c]=function(e){return function(){var t=[].slice.call(arguments);e&&e.apply(this,t),f()}}(p[c])),a(e[c],d,t,c,l))}else!n&&f()}var s,c,l=!!e.test,u=e.load||e.both,d=e.callback||r,p=d,f=e.complete||r;n(l?e.yep:e.nope,!!u),u&&n(u)}var c,l,d=this.yepnope.loader;if(o(e))a(e,0,d,0);else if(j(e))for(c=0;c<e.length;c++)l=e[c],o(l)?a(l,0,d,0):j(l)?p(l):Object(l)===l&&s(l,d);else Object(e)===e&&s(e,d)},p.addPrefix=function(e,t){M[e]=t},p.addFilter=function(e){C.push(e)},p.errorTimeout=1e4,null==t.readyState&&t.addEventListener&&(t.readyState="loading",t.addEventListener("DOMContentLoaded",d=function(){t.removeEventListener("DOMContentLoaded",d,0),t.readyState="complete"},0)),e.yepnope=u(),e.yepnope.executeStack=s,e.yepnope.injectJs=function(e,n,i,o,c,l){var u,d,f=t.createElement("script"),o=o||p.errorTimeout;f.src=e;for(d in i)f.setAttribute(d,i[d]);n=l?s:n||r,f.onreadystatechange=f.onload=function(){!u&&a(f.readyState)&&(u=1,n(),f.onload=f.onreadystatechange=null)},h(function(){u||(u=1,n(1))},o),c?f.onload():m.parentNode.insertBefore(f,m)},e.yepnope.injectCss=function(e,n,i,o,a,c){var l,o=t.createElement("link"),n=c?s:n||r;o.href=e,o.rel="stylesheet",o.type="text/css";for(l in i)o.setAttribute(l,i[l]);a||(m.parentNode.insertBefore(o,m),h(n,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};var Z63=function(e,t){var n=function(){this.afterElement=!!window.getComputedStyle&&window.getComputedStyle(document.body,":after"),this.currentBreakpoint="",this.lastBreakpoint="",this.init()};return n.prototype={init:function(){var e=this;e.afterElement&&e._resizeListener()},_resizeListener:function(){var e=this;t(window).on("resize orientationchange load",function(){e.currentBreakpoint=e.afterElement.getPropertyValue("content").replace(/^["']|["']$/g,""),e.currentBreakpoint!==e.lastBreakpoint&&(t(window).trigger("breakpoint-change",e.currentBreakpoint),e.lastBreakpoint=e.currentBreakpoint)})}},e.mediaqueryListener=e.mediaqueryListener||new n,e}(Z63||{},jQuery);!function(e){"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof module&&module.exports?module.exports=e(require("jquery")):e(jQuery)}(function(e){var t=Array.prototype.slice,n=Array.prototype.splice,i={topSpacing:0,bottomSpacing:0,className:"is-sticky",wrapperClassName:"sticky-wrapper",center:!1,getWidthFrom:"",widthFromWrapper:!0,responsiveWidth:!1,zIndex:"auto"},o=e(window),r=e(document),a=[],s=o.height(),c=function(){for(var t=o.scrollTop(),n=r.height(),i=n-s,c=t>i?i-t:0,l=0,u=a.length;l<u;l++){var d=a[l],p=d.stickyWrapper.offset().top,f=p-d.topSpacing-c;if(d.stickyWrapper.css("height",d.stickyElement.outerHeight()),t<=f)null!==d.currentTop&&(d.stickyElement.css({width:"",position:"",top:"","z-index":""}),d.stickyElement.parent().removeClass(d.className),d.stickyElement.trigger("sticky-end",[d]),d.currentTop=null);else{var h=n-d.stickyElement.outerHeight()-d.topSpacing-d.bottomSpacing-t-c;if(h<0?h+=d.topSpacing:h=d.topSpacing,d.currentTop!==h){var m;d.getWidthFrom?m=e(d.getWidthFrom).width()||null:d.widthFromWrapper&&(m=d.stickyWrapper.width()),null==m&&(m=d.stickyElement.width()),d.stickyElement.css("width",m).css("position","fixed").css("top",h).css("z-index",d.zIndex),d.stickyElement.parent().addClass(d.className),null===d.currentTop?d.stickyElement.trigger("sticky-start",[d]):d.stickyElement.trigger("sticky-update",[d]),d.currentTop===d.topSpacing&&d.currentTop>h||null===d.currentTop&&h<d.topSpacing?d.stickyElement.trigger("sticky-bottom-reached",[d]):null!==d.currentTop&&h===d.topSpacing&&d.currentTop<h&&d.stickyElement.trigger("sticky-bottom-unreached",[d]),d.currentTop=h}var v=d.stickyWrapper.parent(),g=d.stickyElement.offset().top+d.stickyElement.outerHeight()>=v.offset().top+v.outerHeight()&&d.stickyElement.offset().top<=d.topSpacing;g?d.stickyElement.css("position","absolute").css("top","").css("bottom",0).css("z-index",""):d.stickyElement.css("position","fixed").css("top",h).css("bottom","").css("z-index",d.zIndex)}}},l=function(){s=o.height();for(var t=0,n=a.length;t<n;t++){var i=a[t],r=null;i.getWidthFrom?i.responsiveWidth&&(r=e(i.getWidthFrom).width()):i.widthFromWrapper&&(r=i.stickyWrapper.width()),null!=r&&i.stickyElement.css("width",r)}},u={init:function(t){var n=e.extend({},i,t);return this.each(function(){var t=e(this),o=t.attr("id"),r=o?o+"-"+i.wrapperClassName:i.wrapperClassName,s=e("<div></div>").attr("id",r).addClass(n.wrapperClassName);t.wrapAll(function(){if(0==e(this).parent("#"+r).length)return s});var c=t.parent();n.center&&c.css({width:t.outerWidth(),marginLeft:"auto",marginRight:"auto"}),"right"===t.css("float")&&t.css({float:"none"}).parent().css({float:"right"}),n.stickyElement=t,n.stickyWrapper=c,n.currentTop=null,a.push(n),u.setWrapperHeight(this),u.setupChangeListeners(this)})},setWrapperHeight:function(t){var n=e(t),i=n.parent();i&&i.css("height",n.outerHeight())},setupChangeListeners:function(e){if(window.MutationObserver){var t=new window.MutationObserver(function(t){(t[0].addedNodes.length||t[0].removedNodes.length)&&u.setWrapperHeight(e)});t.observe(e,{subtree:!0,childList:!0})}else window.addEventListener?(e.addEventListener("DOMNodeInserted",function(){u.setWrapperHeight(e)},!1),e.addEventListener("DOMNodeRemoved",function(){u.setWrapperHeight(e)},!1)):window.attachEvent&&(e.attachEvent("onDOMNodeInserted",function(){u.setWrapperHeight(e)}),e.attachEvent("onDOMNodeRemoved",function(){u.setWrapperHeight(e)}))},update:c,unstick:function(t){return this.each(function(){for(var t=this,i=e(t),o=-1,r=a.length;r-- >0;)a[r].stickyElement.get(0)===t&&(n.call(a,r,1),o=r);o!==-1&&(i.unwrap(),i.css({width:"",position:"",top:"",float:"","z-index":""}))})}};window.addEventListener?(window.addEventListener("scroll",c,!1),window.addEventListener("resize",l,!1)):window.attachEvent&&(window.attachEvent("onscroll",c),window.attachEvent("onresize",l)),e.fn.sticky=function(n){return u[n]?u[n].apply(this,t.call(arguments,1)):"object"!=typeof n&&n?void e.error("Method "+n+" does not exist on jQuery.sticky"):u.init.apply(this,arguments)},e.fn.unstick=function(n){return u[n]?u[n].apply(this,t.call(arguments,1)):"object"!=typeof n&&n?void e.error("Method "+n+" does not exist on jQuery.sticky"):u.unstick.apply(this,arguments)},e(function(){setTimeout(c,0)})}),function(e,t,n){"use strict";var i=t.Modernizr,o=e("body");e.DLMenu=function(t,n){this.$el=e(n),this._init(t)},e.DLMenu.defaults={animationClasses:{classin:"dl-animate-in-1",classout:"dl-animate-out-1"},onLevelClick:function(e,t){return!1},onLinkClick:function(e,t){return!1}},e.DLMenu.prototype={_init:function(t){this.options=e.extend(!0,{},e.DLMenu.defaults,t),this._config();var n={WebkitAnimation:"webkitAnimationEnd",OAnimation:"oAnimationEnd",msAnimation:"MSAnimationEnd",animation:"animationend"},o={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd",msTransition:"MSTransitionEnd",transition:"transitionend"};this.animEndEventName=n[i.prefixed("animation")]+".dlmenu",this.transEndEventName=o[i.prefixed("transition")]+".dlmenu",this.supportAnimations=i.cssanimations,this.supportTransitions=i.csstransitions,this._initEvents()},_config:function(){this.open=!1,this.$trigger=this.$el.children(".dl-trigger"),this.$menu=this.$el.children(".dl-menu"),this.$menuitems=this.$menu.find("li:not(.dl-back)"),this.$el.find(".dl-submenu").prepend('<li class="dl-back o-nav__sub-link"><a href="#">terug</a></li>'),this.$back=this.$menu.find("li.dl-back")},_initEvents:function(){var t=this;this.$trigger.on("click.dlmenu",function(){return t.open?t.closeMenu():t.openMenu(),!1}),this.$menuitems.on("click.dlmenu",function(n){n.stopPropagation();var i=e(this),o=i.children(".dl-submenu");if(o.length>0){var r=o.clone().css("opacity",0).insertAfter(t.$menu),a=function(){t.$menu.off(t.animEndEventName).removeClass(t.options.animationClasses.classout).addClass("dl-subview"),i.addClass("dl-subviewopen").parents(".dl-subviewopen:first").removeClass("dl-subviewopen").addClass("dl-subview"),r.remove()};return setTimeout(function(){r.addClass(t.options.animationClasses.classin),t.$menu.addClass(t.options.animationClasses.classout),t.supportAnimations?t.$menu.on(t.animEndEventName,a):a.call(),t.options.onLevelClick(i,i.children("a:first").text())}),!1}t.options.onLinkClick(i,n)}),this.$back.on("click.dlmenu",function(n){var i=e(this),o=i.parents(".dl-submenu:first"),r=o.parent(),a=o.clone().insertAfter(t.$menu),s=function(){t.$menu.off(t.animEndEventName).removeClass(t.options.animationClasses.classin),a.remove()};return setTimeout(function(){a.addClass(t.options.animationClasses.classout),t.$menu.addClass(t.options.animationClasses.classin),t.supportAnimations?t.$menu.on(t.animEndEventName,s):s.call(),r.removeClass("dl-subviewopen");var e=i.parents(".dl-subview:first");e.is("li")&&e.addClass("dl-subviewopen"),e.removeClass("dl-subview")}),!1})},closeMenu:function(){if(this.open){var e=this,t=function(){e.$menu.off(e.transEndEventName),e._resetMenu()};this.$menu.removeClass("dl-menuopen"),this.$menu.addClass("dl-menu-toggle"),this.$trigger.removeClass("dl-active"),this.supportTransitions?this.$menu.on(this.transEndEventName,t):t.call(),this.open=!1}},openMenu:function(){if(!this.open){var t=this;e(".js-dlmenu").dlmenu("closeMenu"),o.off("click").on("click.dlmenu",function(){t.closeMenu()}),this.$menu.addClass("dl-menuopen dl-menu-toggle").on(this.transEndEventName,function(){e(this).removeClass("dl-menu-toggle")}),this.$trigger.addClass("dl-active"),this.open=!0}},_resetMenu:function(){this.$menu.removeClass("dl-subview"),this.$menuitems.removeClass("dl-subview dl-subviewopen")}};var r=function(e){t.console&&t.console.error(e)};e.fn.dlmenu=function(t){if("string"==typeof t){var n=Array.prototype.slice.call(arguments,1);this.each(function(){var i=e.data(this,"dlmenu");return i?e.isFunction(i[t])&&"_"!==t.charAt(0)?void i[t].apply(i,n):void r("no such method '"+t+"' for dlmenu instance"):void r("cannot call methods on dlmenu prior to initialization; attempted to call method '"+t+"'")})}else this.each(function(){var n=e.data(this,"dlmenu");n?n._init():n=e.data(this,"dlmenu",new e.DLMenu(t,this))});return this}}(jQuery,window),hoteliers_form.prototype={init:function(){var e=this;e.set_attributes(),e.set_datepickers(),e.set_eventlisteners(),e.onSiteOverlay.init(e)},reset:function(){for(var e in this.params)"ID"!==e&&"lang"!==e&&delete this.params[e]},get_type:function(){return this.type},get_options:function(){return this.options},set_attributes:function(e){var t=this;jQuery("."+t.get_options().form_class).find(".hoteliers-form__grid-item,.js-hoteliers-form__grid-item,.js-grid-item").each(function(){var e=jQuery(this),n=e.find("input, button"),i=e.attr("data-item");n.attr("id")||n.attr("id",i),t.get_options()[i]=n.attr("id"),e.find("label").attr("for",e.find("input").attr("id"))})},set_datepickers:function(){jQuery.datepicker.setDefaults(jQuery.datepicker.regional[this.params.lang]);var e=this,t=new Date,n=jQuery("#"+e.get_options().hoteliers_arrival),i=jQuery("#"+e.get_options().hoteliers_departure);n.datepicker({dateFormat:e.get_options().date_format,minDate:"0",numberOfMonths:portable_devices.isMobile()===!0?1:e.get_options().shownrofmonths,onSelect:function(t){var o=n.datepicker("getDate");o.setDate(o.getDate()+e.get_options().default_days),i.datepicker("option","minDate",o)}}),i.datepicker({dateFormat:e.get_options().date_format,minDate:"0",numberOfMonths:portable_devices.isMobile()===!0?1:e.get_options().shownrofmonths}),n.datepicker("setDate",t),t.setDate(t.getDate()+1),i.datepicker("setDate",t)},set_eventlisteners:function(){var e=this;jQuery("#"+e.get_options().hoteliers_submit).click(function(t){t.preventDefault(),e.hf_check_form(this)}),e.onSiteOverlay.addCloseListener(window,"message",function(t){e.onSiteOverlay.iframeListener(t,e)})},onSiteOverlay:{_setDataFromParent:function(e){var t=this;return t.options=e.get_options(),t.params=e.params,t},addCloseListener:function(e,t,n){switch(!0){case"attachEvent"in e:e.attachEvent("on"+t,n);break;case"addEventListener"in e:default:e.addEventListener(t,n,!1)}},iframeListener:function(e,t){var n=this._setDataFromParent(t);"hide_overlay"===e.data&&n.options.$onSiteOverlay&&n.options.$onSiteOverlay.hide()},init:function(e){var t=this._setDataFromParent(e);if(t.options.enable_onSiteOverlay===!0&&(!window.onSiteOverlayAdded||window.onSiteOverlayAdded!==!0)){window.onSiteOverlayAdded=!0;var n=(window.location.href.match(/^https?\:\/\/(.*?)\//i)[1].split(".").reverse()[0],document.createElement("script"));n.setAttribute("src","//www.hoteliers.com/"+t.params.lang+"/on-site-overlay/1/"+t.params.ID),document.head.appendChild(n)}}},hf_check_dates:function(){var e=this,t=jQuery("#"+e.get_options().hoteliers_arrival).datepicker("getDate"),n=jQuery("#"+e.get_options().hoteliers_departure).datepicker("getDate");return n>t&&(e.params.arrival=t.getDate()+"-"+(t.getMonth()+1)+"-"+t.getFullYear(),e.params.departure=n.getDate()+"-"+(n.getMonth()+1)+"-"+n.getFullYear(),!0)},hf_check_roomid:function(){var e=this,t=jQuery("."+e.get_options().form_class).find(".hf_room_id").val();"undefined"!=typeof t&&(e.params.roomID=t,e.type="one_room")},hf_check_packageid:function(){var e=this,t=jQuery("."+e.get_options().form_class).find(".hf_package_id").val();"undefined"!=typeof t&&(e.params.pID=t,e.type="one_package")},hf_check_engineselect:function(){var e=this,t=jQuery("#hf_engine").val();("rooms"===t||e.get_options().rooms)&&(e.type="rooms"),("packages"===t||e.get_options().packages)&&(e.type="packages")},hf_check_hotelselect:function(){var e=this,t=jQuery("#hf_hotel_hotelid").val();"undefined"!=typeof t&&(e.params.ID=t)},hf_check_password:function(){var e=this,t=jQuery("#"+e.get_options().hoteliers_code).val();"passwd"===e.type&&""===t&&(e.type="default"),"undefined"!=typeof t&&""!==t&&(e.type="passwd",e.params.passwd=t)},hf_create_enginelink:function(){var e="https://www.hoteliers.com/",t={default:e+"wlpEngine.php",packages:e+"wlpPEngine.php",passwd:e+"cwlpEngine.php",rooms:e+"wlpREngine.php",one_package:e+"wlp1PEngine.php",one_room:e+"wlp1REngine.php"};return t[this.get_type()]},hf_create_params:function(){var e=this,t="?"+jQuery.param(e.params);return e.hf_get_analytics(t)},hf_get_analytics:function(e){return"undefined"!=typeof _gaq&&_gaq.push(function(){"undefined"!=typeof _gat&&(e=_gat._getTrackerByName()._getLinkerUrl(e))}),"undefined"!=typeof ga&&ga(function(t){e+="&"+t.get("linkerParam")}),e},hf_open_fancybox:function(e){var t=this,n=null,i=t.get_options(),o=null;try{o=i.$onSiteOverlay||new htlrsOnSiteOverlay}catch(e){}jQuery.fancybox({type:"iframe",width:i.frame_width,height:i.frame_height,href:e,beforeClose:function(){if(t.options.enable_onSiteOverlay!==!0)return!0;var e=jQuery("#"+i.hoteliers_arrival).datepicker("getDate"),r=[e.getFullYear(),e.getMonth()+1,e.getDate()].join("-"),a=jQuery("#"+i.hoteliers_departure).datepicker("getDate"),s=[a.getFullYear(),a.getMonth()+1,a.getDate()].join("-");return null!==o&&(t.options.$onSiteOverlay=o,t.options.$onSiteOverlay.initialize().setArrival(r).setDeparture(s).create(),n=confirm(o.getConfirmMessage("leave"))),null===n||n},afterClose:function(){n===!0&&t.options.$onSiteOverlay.show()}})},hf_use_inline_iframe:function(engine_link){var _=this,iFrame=document.createElement("iframe");with(iFrame)src=engine_link,width=_.get_options().frame_width,height=_.get_options().frame_height;jQuery("#iframe_container").html(iFrame)},hf_check_form:function(e){var t=this;if(t.hf_check_dates()){t.hf_check_roomid(e),t.hf_check_packageid(e),t.hf_check_hotelselect(),t.hf_check_engineselect(),t.hf_check_password();var n=t.hf_create_params(),i=t.hf_create_enginelink(),o=portable_devices.isMobile(),r=portable_devices.isTablet();null!=i&&(r||o?window.open(i+n,"_blank"):t.get_options().use_inline_iframe?t.hf_use_inline_iframe(i+n):t.hf_open_fancybox(i+n))}t.reset()}};var portable_devices={hasTouchscreen:function(){return"ontouchstart"in document.documentElement},isTablet:function(){return navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i)&&screen.width>=600},isMobile:function(){return navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i)&&screen.width<=600},isDesktop:function(){var e=this;return!e.isTablet()||!e.isMobile()}},hc_scripts={toggleMobileQuickbooker:function(){jQuery(".js-quickbooker").length>0&&jQuery(".js-toggle-mobile-qb").click(function(){jQuery(".js-quickbooker").toggleClass("m-quickbooker--mobile-active")})},setBooker:function(){var e=jQuery(".js-quickbooker");e.length<=0||e.each(function(){var e=jQuery(this),t=e.find('input[name="index"]').val(),n=e.find('input[name="hotel"]').val(),i=e.find('input[name="language"]').val(),o=new hoteliers_form(n,i,{date_format:"dd/mm/yy",enable_onSiteOverlay:!0,hoteliers_arrival:"hf-arrivaldate"+t,hoteliers_departure:"hf-departuredate"+t,hoteliers_submit:"hf-checkform"+t}),r=o.get_options();jQuery("#"+r.hoteliers_arrival).datepicker("option","onClose",function(){jQuery("#"+r.hoteliers_departure).datepicker("show")})})},deactivateMobileBooker:function(){jQuery(".js-trigger").on("click",function(){jQuery(".m-quickbooker--mobile-active").length>0&&jQuery(".m-quickbooker--mobile-active").removeClass("m-quickbooker--mobile-active")})}};jQuery(document).ready(function(){jQuery(".js-custom-dropdown").length>0&&(jQuery(document).click(function(){jQuery(".js-custom-dropdown").removeClass("custom-dropdown--active")}),jQuery(".js-custom-dropdown").on("click",function(){return!1}),jQuery(".js-custom-dropdown-link").on("click",function(){var e=jQuery(this).attr("data-level-parent"),t=jQuery(this).attr("data-level-group"),n=jQuery(this).attr("data-level-top");return"undefined"!=typeof n&&"top"==n&&jQuery('.js-custom-dropdown[data-level-type="'+e+'"]').hasClass("custom-dropdown--active")?void jQuery(".js-custom-dropdown").removeClass("custom-dropdown--active"):(jQuery('.js-custom-dropdown[data-level-type="'+e+'"]').hasClass("custom-dropdown--active")||jQuery('.js-custom-dropdown[data-level-group="'+t+'"]').removeClass("custom-dropdown--active"),void jQuery('.js-custom-dropdown[data-level-type="'+e+'"]').toggleClass("custom-dropdown--active"))})),jQuery(".js-custom-dropdown").length>0&&$(".js-scroll-to").click(function(){var e=jQuery(this).attr("rel");scrollToAnchor(e)}),$(function(){$(".js-dlmenu").dlmenu({animationClasses:{classin:"dl-animate-in-2",classout:"dl-animate-out-2"}})}),$(window).on("breakpoint-change",function(e,t){"bp-small"===t&&(console.log("CSS Breakpoint screen-small"),$(".js-nav--main").unstick()),"bp-up-from-small"===t&&(console.log("CSS Breakpoint up-from-small"),$(".js-nav--main").sticky({topSpacing:0,wrapperClassName:"sticky-nav",getWidthFrom:"body",zIndex:5e3}))}),hc_scripts.toggleMobileQuickbooker(),hc_scripts.setBooker(),hc_scripts.deactivateMobileBooker()});
+/* Modernizr 2.6.2 (Custom Build) | MIT & BSD
+ * Build: http://modernizr.com/download/#-cssanimations-csstransitions-touch-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load
+ */
+;window.Modernizr=function(a,b,c){function z(a){j.cssText=a}function A(a,b){return z(m.join(a+";")+(b||""))}function B(a,b){return typeof a===b}function C(a,b){return!!~(""+a).indexOf(b)}function D(a,b){for(var d in a){var e=a[d];if(!C(e,"-")&&j[e]!==c)return b=="pfx"?e:!0}return!1}function E(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:B(f,"function")?f.bind(d||b):f}return!1}function F(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+o.join(d+" ")+d).split(" ");return B(b,"string")||B(b,"undefined")?D(e,b):(e=(a+" "+p.join(d+" ")+d).split(" "),E(e,b,c))}var d="2.6.2",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n="Webkit Moz O ms",o=n.split(" "),p=n.toLowerCase().split(" "),q={},r={},s={},t=[],u=t.slice,v,w=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},x={}.hasOwnProperty,y;!B(x,"undefined")&&!B(x.call,"undefined")?y=function(a,b){return x.call(a,b)}:y=function(a,b){return b in a&&B(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=u.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(u.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(u.call(arguments)))};return e}),q.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:w(["@media (",m.join("touch-enabled),("),h,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},q.cssanimations=function(){return F("animationName")},q.csstransitions=function(){return F("transition")};for(var G in q)y(q,G)&&(v=G.toLowerCase(),e[v]=q[G](),t.push((e[v]?"":"no-")+v));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)y(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},z(""),i=k=null,function(a,b){function k(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function l(){var a=r.elements;return typeof a=="string"?a.split(" "):a}function m(a){var b=i[a[g]];return b||(b={},h++,a[g]=h,i[h]=b),b}function n(a,c,f){c||(c=b);if(j)return c.createElement(a);f||(f=m(c));var g;return f.cache[a]?g=f.cache[a].cloneNode():e.test(a)?g=(f.cache[a]=f.createElem(a)).cloneNode():g=f.createElem(a),g.canHaveChildren&&!d.test(a)?f.frag.appendChild(g):g}function o(a,c){a||(a=b);if(j)return a.createDocumentFragment();c=c||m(a);var d=c.frag.cloneNode(),e=0,f=l(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function p(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return r.shivMethods?n(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+l().join().replace(/\w+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(r,b.frag)}function q(a){a||(a=b);var c=m(a);return r.shivCSS&&!f&&!c.hasCSS&&(c.hasCSS=!!k(a,"article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}")),j||p(a,c),a}var c=a.html5||{},d=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,e=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,f,g="_html5shiv",h=0,i={},j;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",f="hidden"in a,j=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){f=!0,j=!0}})();var r={elements:c.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",shivCSS:c.shivCSS!==!1,supportsUnknownElements:j,shivMethods:c.shivMethods!==!1,type:"default",shivDocument:q,createElement:n,createDocumentFragment:o};a.html5=r,q(b)}(this,b),e._version=d,e._prefixes=m,e._domPrefixes=p,e._cssomPrefixes=o,e.testProp=function(a){return D([a])},e.testAllProps=F,e.testStyles=w,e.prefixed=function(a,b,c){return b?F(a,b,c):F(a,"pfx")},g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+t.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};
+'use strict';
+var Z63 = (function (parent, $) {
+
+	var MediaQueryListener = function() {
+		this.afterElement = window.getComputedStyle ? window.getComputedStyle(document.body, ':after') : false;
+		this.currentBreakpoint = '';
+		this.lastBreakpoint = '';
+		this.init();
+	};
+
+	MediaQueryListener.prototype = {
+
+		init: function () {
+			var self = this;
+
+			if(!self.afterElement) {
+				return;
+			}
+
+			self._resizeListener();
+
+		},
+		_resizeListener: function () {
+			var self = this;
+
+			$(window).on('resize orientationchange load', function() {
+				// Regexp for removing quotes added by various browsers
+				self.currentBreakpoint = self.afterElement.getPropertyValue('content').replace(/^["']|["']$/g, '');
+
+				if (self.currentBreakpoint !== self.lastBreakpoint) {
+					$(window).trigger('breakpoint-change', self.currentBreakpoint);
+					self.lastBreakpoint = self.currentBreakpoint;
+				}
+
+			});
+		}
+
+	};
+
+	parent.mediaqueryListener = parent.mediaqueryListener || new MediaQueryListener();
+
+	return parent;
+
+}(Z63 || {}, jQuery));
+
+// Sticky Plugin v1.0.4 for jQuery
+// =============
+// Author: Anthony Garand
+// Improvements by German M. Bravo (Kronuz) and Ruud Kamphuis (ruudk)
+// Improvements by Leonardo C. Daronco (daronco)
+// Created: 02/14/2011
+// Date: 07/20/2015
+// Website: http://stickyjs.com/
+// Description: Makes an element on the page stick on the screen as you scroll
+//              It will only set the 'top' and 'position' of your element, you
+//              might need to adjust the width in some cases.
+
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node/CommonJS
+        module.exports = factory(require('jquery'));
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+    var slice = Array.prototype.slice; // save ref to original slice()
+    var splice = Array.prototype.splice; // save ref to original slice()
+
+    var defaults = {
+            topSpacing: 0,
+            bottomSpacing: 0,
+            className: 'is-sticky',
+            wrapperClassName: 'sticky-wrapper',
+            center: false,
+            getWidthFrom: '',
+            widthFromWrapper: true, // works only when .getWidthFrom is empty
+            responsiveWidth: false,
+            zIndex: 'auto'
+        },
+        $window = $(window),
+        $document = $(document),
+        sticked = [],
+        windowHeight = $window.height(),
+        scroller = function() {
+            var scrollTop = $window.scrollTop(),
+                documentHeight = $document.height(),
+                dwh = documentHeight - windowHeight,
+                extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
+
+            for (var i = 0, l = sticked.length; i < l; i++) {
+                var s = sticked[i],
+                    elementTop = s.stickyWrapper.offset().top,
+                    etse = elementTop - s.topSpacing - extra;
+
+                //update height in case of dynamic content
+                s.stickyWrapper.css('height', s.stickyElement.outerHeight());
+
+                if (scrollTop <= etse) {
+                    if (s.currentTop !== null) {
+                        s.stickyElement
+                            .css({
+                                'width': '',
+                                'position': '',
+                                'top': '',
+                                'z-index': ''
+                            });
+                        s.stickyElement.parent().removeClass(s.className);
+                        s.stickyElement.trigger('sticky-end', [s]);
+                        s.currentTop = null;
+                    }
+                }
+                else {
+                    var newTop = documentHeight - s.stickyElement.outerHeight()
+                        - s.topSpacing - s.bottomSpacing - scrollTop - extra;
+                    if (newTop < 0) {
+                        newTop = newTop + s.topSpacing;
+                    } else {
+                        newTop = s.topSpacing;
+                    }
+                    if (s.currentTop !== newTop) {
+                        var newWidth;
+                        if (s.getWidthFrom) {
+                            newWidth = $(s.getWidthFrom).width() || null;
+                        } else if (s.widthFromWrapper) {
+                            newWidth = s.stickyWrapper.width();
+                        }
+                        if (newWidth == null) {
+                            newWidth = s.stickyElement.width();
+                        }
+                        s.stickyElement
+                            .css('width', newWidth)
+                            .css('position', 'fixed')
+                            .css('top', newTop)
+                            .css('z-index', s.zIndex);
+
+                        s.stickyElement.parent().addClass(s.className);
+
+                        if (s.currentTop === null) {
+                            s.stickyElement.trigger('sticky-start', [s]);
+                        } else {
+                            // sticky is started but it have to be repositioned
+                            s.stickyElement.trigger('sticky-update', [s]);
+                        }
+
+                        if (s.currentTop === s.topSpacing && s.currentTop > newTop || s.currentTop === null && newTop < s.topSpacing) {
+                            // just reached bottom || just started to stick but bottom is already reached
+                            s.stickyElement.trigger('sticky-bottom-reached', [s]);
+                        } else if(s.currentTop !== null && newTop === s.topSpacing && s.currentTop < newTop) {
+                            // sticky is started && sticked at topSpacing && overflowing from top just finished
+                            s.stickyElement.trigger('sticky-bottom-unreached', [s]);
+                        }
+
+                        s.currentTop = newTop;
+                    }
+
+                    // Check if sticky has reached end of container and stop sticking
+                    var stickyWrapperContainer = s.stickyWrapper.parent();
+                    var unstick = (s.stickyElement.offset().top + s.stickyElement.outerHeight() >= stickyWrapperContainer.offset().top + stickyWrapperContainer.outerHeight()) && (s.stickyElement.offset().top <= s.topSpacing);
+
+                    if( unstick ) {
+                        s.stickyElement
+                            .css('position', 'absolute')
+                            .css('top', '')
+                            .css('bottom', 0)
+                            .css('z-index', '');
+                    } else {
+                        s.stickyElement
+                            .css('position', 'fixed')
+                            .css('top', newTop)
+                            .css('bottom', '')
+                            .css('z-index', s.zIndex);
+                    }
+                }
+            }
+        },
+        resizer = function() {
+            windowHeight = $window.height();
+
+            for (var i = 0, l = sticked.length; i < l; i++) {
+                var s = sticked[i];
+                var newWidth = null;
+                if (s.getWidthFrom) {
+                    if (s.responsiveWidth) {
+                        newWidth = $(s.getWidthFrom).width();
+                    }
+                } else if(s.widthFromWrapper) {
+                    newWidth = s.stickyWrapper.width();
+                }
+                if (newWidth != null) {
+                    s.stickyElement.css('width', newWidth);
+                }
+            }
+        },
+        methods = {
+            init: function(options) {
+                var o = $.extend({}, defaults, options);
+                return this.each(function() {
+                    var stickyElement = $(this);
+
+                    var stickyId = stickyElement.attr('id');
+                    var wrapperId = stickyId ? stickyId + '-' + defaults.wrapperClassName : defaults.wrapperClassName;
+                    var wrapper = $('<div></div>')
+                        .attr('id', wrapperId)
+                        .addClass(o.wrapperClassName);
+
+                    stickyElement.wrapAll(function() {
+                        if ($(this).parent("#" + wrapperId).length == 0) {
+                            return wrapper;
+                        }
+                    });
+
+                    var stickyWrapper = stickyElement.parent();
+
+                    if (o.center) {
+                        stickyWrapper.css({width:stickyElement.outerWidth(),marginLeft:"auto",marginRight:"auto"});
+                    }
+
+                    if (stickyElement.css("float") === "right") {
+                        stickyElement.css({"float":"none"}).parent().css({"float":"right"});
+                    }
+
+                    o.stickyElement = stickyElement;
+                    o.stickyWrapper = stickyWrapper;
+                    o.currentTop    = null;
+
+                    sticked.push(o);
+
+                    methods.setWrapperHeight(this);
+                    methods.setupChangeListeners(this);
+                });
+            },
+
+            setWrapperHeight: function(stickyElement) {
+                var element = $(stickyElement);
+                var stickyWrapper = element.parent();
+                if (stickyWrapper) {
+                    stickyWrapper.css('height', element.outerHeight());
+                }
+            },
+
+            setupChangeListeners: function(stickyElement) {
+                if (window.MutationObserver) {
+                    var mutationObserver = new window.MutationObserver(function(mutations) {
+                        if (mutations[0].addedNodes.length || mutations[0].removedNodes.length) {
+                            methods.setWrapperHeight(stickyElement);
+                        }
+                    });
+                    mutationObserver.observe(stickyElement, {subtree: true, childList: true});
+                } else {
+                    if (window.addEventListener) {
+                        stickyElement.addEventListener('DOMNodeInserted', function() {
+                            methods.setWrapperHeight(stickyElement);
+                        }, false);
+                        stickyElement.addEventListener('DOMNodeRemoved', function() {
+                            methods.setWrapperHeight(stickyElement);
+                        }, false);
+                    } else if (window.attachEvent) {
+                        stickyElement.attachEvent('onDOMNodeInserted', function() {
+                            methods.setWrapperHeight(stickyElement);
+                        });
+                        stickyElement.attachEvent('onDOMNodeRemoved', function() {
+                            methods.setWrapperHeight(stickyElement);
+                        });
+                    }
+                }
+            },
+            update: scroller,
+            unstick: function(options) {
+                return this.each(function() {
+                    var that = this;
+                    var unstickyElement = $(that);
+
+                    var removeIdx = -1;
+                    var i = sticked.length;
+                    while (i-- > 0) {
+                        if (sticked[i].stickyElement.get(0) === that) {
+                            splice.call(sticked,i,1);
+                            removeIdx = i;
+                        }
+                    }
+                    if(removeIdx !== -1) {
+                        unstickyElement.unwrap();
+                        unstickyElement
+                            .css({
+                                'width': '',
+                                'position': '',
+                                'top': '',
+                                'float': '',
+                                'z-index': ''
+                            })
+                        ;
+                    }
+                });
+            }
+        };
+
+    // should be more efficient than using $window.scroll(scroller) and $window.resize(resizer):
+    if (window.addEventListener) {
+        window.addEventListener('scroll', scroller, false);
+        window.addEventListener('resize', resizer, false);
+    } else if (window.attachEvent) {
+        window.attachEvent('onscroll', scroller);
+        window.attachEvent('onresize', resizer);
+    }
+
+    $.fn.sticky = function(method) {
+        if (methods[method]) {
+            return methods[method].apply(this, slice.call(arguments, 1));
+        } else if (typeof method === 'object' || !method ) {
+            return methods.init.apply( this, arguments );
+        } else {
+            $.error('Method ' + method + ' does not exist on jQuery.sticky');
+        }
+    };
+
+    $.fn.unstick = function(method) {
+        if (methods[method]) {
+            return methods[method].apply(this, slice.call(arguments, 1));
+        } else if (typeof method === 'object' || !method ) {
+            return methods.unstick.apply( this, arguments );
+        } else {
+            $.error('Method ' + method + ' does not exist on jQuery.sticky');
+        }
+    };
+    $(function() {
+        setTimeout(scroller, 0);
+    });
+}));
+
+/**
+ * jquery.dlmenu.js v1.0.1
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
+;( function( $, window, undefined ) {
+
+	'use strict';
+
+	// global
+	var Modernizr = window.Modernizr, $body = $( 'body' );
+
+	$.DLMenu = function( options, element ) {
+		this.$el = $( element );
+		this._init( options );
+	};
+
+	// the options
+	$.DLMenu.defaults = {
+		// classes for the animation effects
+		animationClasses : { classin : 'dl-animate-in-1', classout : 'dl-animate-out-1' },
+		// callback: click a link that has a sub menu
+		// el is the link element (li); name is the level name
+		onLevelClick : function( el, name ) { return false; },
+		// callback: click a link that does not have a sub menu
+		// el is the link element (li); ev is the event obj
+		onLinkClick : function( el, ev ) { return false; }
+	};
+
+	$.DLMenu.prototype = {
+		_init : function( options ) {
+
+			// options
+			this.options = $.extend( true, {}, $.DLMenu.defaults, options );
+			// cache some elements and initialize some variables
+			this._config();
+
+			var animEndEventNames = {
+					'WebkitAnimation' : 'webkitAnimationEnd',
+					'OAnimation' : 'oAnimationEnd',
+					'msAnimation' : 'MSAnimationEnd',
+					'animation' : 'animationend'
+				},
+				transEndEventNames = {
+					'WebkitTransition' : 'webkitTransitionEnd',
+					'MozTransition' : 'transitionend',
+					'OTransition' : 'oTransitionEnd',
+					'msTransition' : 'MSTransitionEnd',
+					'transition' : 'transitionend'
+				};
+			// animation end event name
+			this.animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ] + '.dlmenu';
+			// transition end event name
+			this.transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ] + '.dlmenu',
+			// support for css animations and css transitions
+			this.supportAnimations = Modernizr.cssanimations,
+			this.supportTransitions = Modernizr.csstransitions;
+
+			this._initEvents();
+
+		},
+		_config : function() {
+			this.open = false;
+			this.$trigger = this.$el.children( '.dl-trigger' );
+			//this.$menu = this.$el.children( 'ul.dl-menu' );
+			this.$menu = this.$el.children( '.dl-menu' );
+			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
+			//this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">back</a></li>' );
+			this.$el.find( '.dl-submenu' ).prepend( '<li class="dl-back o-nav__sub-link"><a href="#">terug</a></li>' );
+			this.$back = this.$menu.find( 'li.dl-back' );
+		},
+		_initEvents : function() {
+
+			var self = this;
+
+			this.$trigger.on( 'click.dlmenu', function() {
+				if( self.open ) {
+					self.closeMenu();
+				}
+				else {
+					self.openMenu();
+				}
+				return false;
+
+			} );
+
+			this.$menuitems.on( 'click.dlmenu', function( event ) {
+
+				event.stopPropagation();
+
+				var $item = $(this),
+					//$submenu = $item.children( 'ul.dl-submenu' );
+					$submenu = $item.children( '.dl-submenu' );
+
+				if( $submenu.length > 0 ) {
+
+					var $flyin = $submenu.clone().css( 'opacity', 0 ).insertAfter( self.$menu ),
+						onAnimationEndFn = function() {
+							self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classout ).addClass( 'dl-subview' );
+							$item.addClass( 'dl-subviewopen' ).parents( '.dl-subviewopen:first' ).removeClass( 'dl-subviewopen' ).addClass( 'dl-subview' );
+							$flyin.remove();
+						};
+
+					setTimeout( function() {
+						$flyin.addClass( self.options.animationClasses.classin );
+						self.$menu.addClass( self.options.animationClasses.classout );
+						if( self.supportAnimations ) {
+							self.$menu.on( self.animEndEventName, onAnimationEndFn );
+						}
+						else {
+							onAnimationEndFn.call();
+						}
+
+						self.options.onLevelClick( $item, $item.children( 'a:first' ).text() );
+					} );
+
+					return false;
+
+				}
+				else {
+					self.options.onLinkClick( $item, event );
+				}
+
+			} );
+
+			this.$back.on( 'click.dlmenu', function( event ) {
+
+				var $this = $( this ),
+					//$submenu = $this.parents( 'ul.dl-submenu:first' ),
+					$submenu = $this.parents( '.dl-submenu:first' ),
+					$item = $submenu.parent(),
+
+					$flyin = $submenu.clone().insertAfter( self.$menu );
+
+				var onAnimationEndFn = function() {
+					self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classin );
+					$flyin.remove();
+				};
+
+				setTimeout( function() {
+					$flyin.addClass( self.options.animationClasses.classout );
+					self.$menu.addClass( self.options.animationClasses.classin );
+					if( self.supportAnimations ) {
+						self.$menu.on( self.animEndEventName, onAnimationEndFn );
+					}
+					else {
+						onAnimationEndFn.call();
+					}
+
+					$item.removeClass( 'dl-subviewopen' );
+
+					var $subview = $this.parents( '.dl-subview:first' );
+					if( $subview.is( 'li' ) ) {
+						$subview.addClass( 'dl-subviewopen' );
+					}
+					$subview.removeClass( 'dl-subview' );
+				} );
+
+				return false;
+
+			} );
+
+		},
+		closeMenu : function() {
+			if( !this.open ) {
+				return;
+			}
+            var self = this,
+                onTransitionEndFn = function() {
+                    self.$menu.off( self.transEndEventName );
+                    self._resetMenu();
+                };
+
+            this.$menu.removeClass( 'dl-menuopen' );
+            this.$menu.addClass( 'dl-menu-toggle' );
+            this.$trigger.removeClass( 'dl-active' );
+
+            if( this.supportTransitions ) {
+                this.$menu.on( this.transEndEventName, onTransitionEndFn );
+            }
+            else {
+                onTransitionEndFn.call();
+            }
+
+            this.open = false;
+		},
+		openMenu : function() {
+           if( this.open ) {
+				return;
+			}
+            var self = this;
+            //console.log(this.$el);
+            $('.js-dlmenu').dlmenu('closeMenu');
+            // clicking somewhere else makes the menu close
+            $body.off( 'click' ).on( 'click.dlmenu', function() {
+                self.closeMenu() ;
+            } );
+            this.$menu.addClass( 'dl-menuopen dl-menu-toggle' ).on( this.transEndEventName, function() {
+                $( this ).removeClass( 'dl-menu-toggle' );
+            } );
+            this.$trigger.addClass( 'dl-active' );
+            this.open = true;
+		},
+		// resets the menu to its original state (first level of options)
+		_resetMenu : function() {
+			this.$menu.removeClass( 'dl-subview' );
+			this.$menuitems.removeClass( 'dl-subview dl-subviewopen' );
+		}
+	};
+
+	var logError = function( message ) {
+		if ( window.console ) {
+			window.console.error( message );
+		}
+	};
+
+	$.fn.dlmenu = function( options ) {
+		if ( typeof options === 'string' ) {
+			var args = Array.prototype.slice.call( arguments, 1 );
+			this.each(function() {
+				var instance = $.data( this, 'dlmenu' );
+				if ( !instance ) {
+					logError( "cannot call methods on dlmenu prior to initialization; " +
+					"attempted to call method '" + options + "'" );
+					return;
+				}
+				if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
+					logError( "no such method '" + options + "' for dlmenu instance" );
+					return;
+				}
+				instance[ options ].apply( instance, args );
+			});
+		}
+		else {
+			this.each(function() {
+				var instance = $.data( this, 'dlmenu' );
+				if ( instance ) {
+					instance._init();
+				}
+				else {
+					instance = $.data( this, 'dlmenu', new $.DLMenu( options, this ) );
+				}
+			});
+		}
+		return this;
+	};
+
+} )( jQuery, window );
+
+/*  -----------------------------------------------------------------
+ *  Hoteliers.js v3.2.0                                             *
+ *  @author Hoteliers.com                                           *
+ *  -----------------------------------------------------------------
+ */
+
+/*  Constructor of hoteliers_form
+ *  @param id:                      the id of the hotel
+ *  @param language:                the session language
+ *  @param dyn_options:             any option that differ from default options, thus dynamic
+ *  @param type:                    could be 'default', 'packages', 'rooms'
+ *                                  depending on the type of form used
+ *  @param enable_onSiteOverlay:    can be 'true' or 'false' (boolean)
+ *                                  this will show a dialog after closing the booking engine to let the
+ *                                  booker remind himself/herself of his/her booking
+ *                                  !note: the feature should still be enabled in Hoteliers Extranet!
+ *  @return                         new object
+ */
+function hoteliers_form(id,language,dyn_options) {
+    var _ = this;
+    _.type = 'default';
+    _.params = {};
+    _.params.ID = id;
+    _.params.lang = language;
+
+    // Static options
+    _.options = {
+        form_class: 'hoteliers-form__form',
+        date_format: 'dd.mm.yy',
+        default_days: 1,
+        frame_width: 1020,
+        frame_height: '100%',
+        use_inline_iframe: false,
+        packages: false,
+        rooms: false,
+        shownrofmonths: 2,
+        hoteliers_submit: 'hf-checkform',
+        hoteliers_arrival: 'hf-arrivaldate',
+        hoteliers_departure: 'hf-departuredate',
+        enable_onSiteOverlay: false,
+    };
+
+    jQuery.extend(_.options,dyn_options);
+
+    // Init all other requisites
+    _.init();
+}
+
+hoteliers_form.prototype = {
+    init: function() {
+        var _ = this;
+        _.set_attributes();
+        _.set_datepickers();
+        _.set_eventlisteners();
+        _.onSiteOverlay.init(_);
+    },
+
+    /*  Function to reset the params object */
+    /*  @return         void */
+    reset: function() {
+        for (var prop in this.params) {
+            if (!(prop === 'ID' || prop === 'lang')) {
+                delete this.params[prop];
+            }
+        }
+    },
+
+    /*  Function to retrieve the script type */
+    /*  @return         script type */
+    get_type: function() {
+        return this.type;
+    },
+
+    /*  Function to return the current option settings */
+    /*  @return         current option settings */
+    get_options: function() {
+        return this.options;
+    },
+
+    /*  Function to set the neccesary attributes if empty */
+    /*  @return         void: attributes set */
+    set_attributes: function(obj) {
+        var _ = this;
+        jQuery('.'+_.get_options().form_class).find('.hoteliers-form__grid-item,.js-hoteliers-form__grid-item,.js-grid-item').each(function() {
+            var $this = jQuery(this),
+                $inputAndButton = $this.find('input, button'),
+                element = $this.attr('data-item');
+
+            if (!$inputAndButton.attr('id')) {
+                $inputAndButton.attr('id',element);
+            }
+            _.get_options()[element] = $inputAndButton.attr('id');
+
+            $this.find('label').attr('for',$this.find('input').attr('id'));
+        });
+    },
+
+    /*  Function to set the datepickers and their options */
+    /*  @return         void: initialized datepicker objects */
+    set_datepickers: function() {
+        jQuery.datepicker.setDefaults(jQuery.datepicker.regional[this.params.lang]);
+
+        var _ = this,
+            today = new Date(),
+            $arrival = jQuery('#'+_.get_options().hoteliers_arrival),
+            $departure = jQuery('#'+_.get_options().hoteliers_departure);
+
+        $arrival.datepicker({
+            dateFormat: _.get_options().date_format,
+            minDate: '0',
+            numberOfMonths: ((portable_devices.isMobile() === true) ? 1 : _.get_options().shownrofmonths),
+            onSelect: function(date) {
+                var curr_date = $arrival.datepicker('getDate');
+                curr_date.setDate(curr_date.getDate()+_.get_options().default_days);
+                $departure.datepicker('option','minDate',curr_date);
+            }
+        });
+        $departure.datepicker({
+            dateFormat: _.get_options().date_format,
+            minDate: '0',
+            numberOfMonths: ((portable_devices.isMobile() === true) ? 1 : _.get_options().shownrofmonths),
+        });
+
+        $arrival.datepicker('setDate',today);
+        today.setDate(today.getDate()+1);
+        $departure.datepicker('setDate',today);
+    },
+
+    /*  Function to set all event listeners needed */
+    /*  @return         void: initialized eventlisteners */
+    set_eventlisteners: function() {
+        var _ = this;
+
+        jQuery('#'+_.get_options().hoteliers_submit).click(function(event) {
+            event.preventDefault();
+
+            // Execute
+            _.hf_check_form(this);
+        });
+
+        _.onSiteOverlay.addCloseListener(window,'message',function(objEvent) {
+            _.onSiteOverlay.iframeListener(objEvent,_);
+        });
+
+    },
+
+    /*  On-site Overlay child object */
+    onSiteOverlay: {
+        /*  Function to set some params from parent to child object */
+        /*  @return void */
+        _setDataFromParent: function(objParent) {
+            var _ = this;
+            _.options = objParent.get_options();
+            _.params = objParent.params;
+            return _;
+        },
+
+        /*  Listen to 'close' event */
+        /*  @return void */
+        addCloseListener: function(objTarget,strEvent,fncCallback) {
+            switch (true) {
+                //IE
+                case 'attachEvent' in objTarget:
+                    objTarget.attachEvent('on'+strEvent,fncCallback);
+                    break;
+                case 'addEventListener' in objTarget:
+                default:
+                    objTarget.addEventListener(strEvent,fncCallback,false);
+                    break;
+            }
+        },
+
+        /*  Listen to events on-site overlay */
+        /*  @return void */
+        iframeListener: function(objEvent,objParent) {
+            var _ = this._setDataFromParent(objParent);
+            if (objEvent.data === 'hide_overlay' && _.options.$onSiteOverlay) {
+                _.options.$onSiteOverlay.hide();
+            }
+        },
+
+        /*  Function to initialize the On-site Overlay */
+        /*  @return void */
+        init: function(objParent) {
+            var _ = this._setDataFromParent(objParent);
+
+            // Check if feature is enabled in form options
+            if (_.options.enable_onSiteOverlay !== true) {
+                return;
+            }
+
+            // Avoid multiple loads
+            if (window.onSiteOverlayAdded && window.onSiteOverlayAdded === true) {
+                return;
+            }
+            window.onSiteOverlayAdded = true;
+
+            // Load JavaScript to check if on-site overlay is enabled on Hoteliers side
+            var strExtension = window.location.href.match(/^https?\:\/\/(.*?)\//i)[1].split('.').reverse()[0],
+                objScript = document.createElement('script');
+            objScript.setAttribute('src','//www.hoteliers.com/'+_.params.lang+'/on-site-overlay/1/'+_.params.ID);
+            document.head.appendChild(objScript);
+        },
+    },
+
+    /*  Function to check if the dates are correct */
+    /*  @return         true of false */
+    hf_check_dates: function() {
+        var _ = this,
+            arrival_date = jQuery('#'+_.get_options().hoteliers_arrival).datepicker('getDate'),
+            departure_date = jQuery('#'+_.get_options().hoteliers_departure).datepicker('getDate');
+        if (departure_date > arrival_date) {
+            _.params.arrival = arrival_date.getDate()+'-'+(arrival_date.getMonth()+1)+'-'+arrival_date.getFullYear();
+            _.params.departure = departure_date.getDate()+'-'+(departure_date.getMonth()+1)+'-'+departure_date.getFullYear();
+            return true;
+        }
+        return false;
+    },
+
+    /* Function to check if a room id is present in the sibling object */
+    /* @return          void: set roomID in object */
+    hf_check_roomid: function() {
+        var _ = this,
+            room_id = jQuery('.'+_.get_options().form_class).find('.hf_room_id').val();
+        if (typeof room_id !== 'undefined') {
+            _.params.roomID = room_id;
+            _.type = 'one_room';
+        }
+    },
+
+    /* Function to check if a room id is present in the sibling object */
+    /* @return          void: set roomID in object */
+    hf_check_packageid: function() {
+        var _ = this,
+            package_id = jQuery('.'+_.get_options().form_class).find('.hf_package_id').val();
+        if (typeof package_id !== 'undefined') {
+            _.params.pID = package_id;
+            _.type = 'one_package';
+        }
+    },
+
+
+    /*  Function to check if an engine option is selected */
+    /*  @return         void */
+    hf_check_engineselect: function() {
+        var _ = this,
+            engine_select = jQuery('#hf_engine').val();
+        if (engine_select === 'rooms' || _.get_options().rooms) {
+            _.type = 'rooms';
+        }
+        if (engine_select === 'packages' || _.get_options().packages) {
+            _.type = 'packages';
+        }
+    },
+
+    /*  Function to check if an hotel option is selected */
+    /*  @return         void */
+    hf_check_hotelselect: function() {
+        var _ = this,
+            hotel_select = jQuery('#hf_hotel_hotelid').val();
+        if (typeof hotel_select !== 'undefined') {
+            _.params.ID = hotel_select;
+        }
+    },
+
+    /*  Function to check if a corporate code was used */
+    /*  @return         void */
+    hf_check_password: function() {
+        var _ = this,
+            password = jQuery('#'+_.get_options().hoteliers_code).val();
+        if (_.type === 'passwd' && password === '') {
+            _.type = 'default';
+        }
+        if (typeof password !== 'undefined' && password !== '') {
+            _.type = 'passwd';
+            _.params.passwd = password;
+        }
+    },
+
+    /*  Function to create the engine link */
+    /*  @return         the created engine link */
+    hf_create_enginelink: function() {
+        var protocolHost = 'https://www.hoteliers.com/',
+            engines = {
+                default: protocolHost+'wlpEngine.php',
+                packages: protocolHost+'wlpPEngine.php',
+                passwd: protocolHost+'cwlpEngine.php',
+                rooms: protocolHost+'wlpREngine.php',
+                one_package: protocolHost+'wlp1PEngine.php',
+                one_room: protocolHost+'wlp1REngine.php',
+            };
+        return engines[this.get_type()];
+    },
+
+    /*  Function to set the additional data */
+    /*  @return         the parameters needed for the type */
+    hf_create_params: function() {
+        var _ = this,
+            params = '?'+jQuery.param(_.params);
+        return _.hf_get_analytics(params);
+    },
+
+    /*  Function to set the google analytics parameters */
+    /*  @return         string of the ga params */
+    hf_get_analytics: function(params) {
+        if (typeof(_gaq) !== 'undefined') {
+            _gaq.push(function() {
+                if (typeof(_gat) !== 'undefined') {
+                    params = _gat._getTrackerByName()._getLinkerUrl(params);
+                }
+            });
+        }
+        if (typeof(ga) !== 'undefined') {
+            ga(function(tracker) {
+                params += '&'+tracker.get('linkerParam');
+            });
+        }
+        return params;
+    },
+
+    /*  Function to open a fancybox */
+    /*  @return         void */
+    hf_open_fancybox: function(engine_link) {
+        var _ = this,
+            booShowLightbox = null,
+            objOptions = _.get_options(),
+            $onSiteOverlay = null;
+
+        try {
+            $onSiteOverlay = objOptions.$onSiteOverlay || new htlrsOnSiteOverlay();
+        } catch(e) {}
+
+        jQuery.fancybox({
+            type: 'iframe',
+            width: objOptions.frame_width,
+            height: objOptions.frame_height,
+            href: engine_link,
+            beforeClose: function() {
+                if (_.options.enable_onSiteOverlay !== true) {
+                    return true;
+                }
+
+                var objArrivalDate = jQuery('#'+objOptions.hoteliers_arrival).datepicker('getDate'),
+                    strArrivalDate = [objArrivalDate.getFullYear(),objArrivalDate.getMonth()+1,objArrivalDate.getDate(),].join('-'),
+                    objDepartureDate = jQuery('#'+objOptions.hoteliers_departure).datepicker('getDate'),
+                    strDepartureDate = [objDepartureDate.getFullYear(),objDepartureDate.getMonth()+1,objDepartureDate.getDate(),].join('-');
+
+                if ($onSiteOverlay !== null) {
+                    _.options.$onSiteOverlay = $onSiteOverlay;
+                    _.options.$onSiteOverlay
+                        .initialize()
+                        .setArrival(strArrivalDate)
+                        .setDeparture(strDepartureDate)
+                        .create();
+
+                    // Show lightbox
+                    booShowLightbox = confirm($onSiteOverlay.getConfirmMessage('leave'));
+                }
+
+                return (booShowLightbox !== null ? booShowLightbox : true);
+            },
+            afterClose: function() {
+                if (booShowLightbox === true) {
+                    _.options.$onSiteOverlay.show();
+                }
+            },
+        });
+    },
+
+    /*  Function to open a inline iframe */
+    /*  @return         void */
+    hf_use_inline_iframe: function(engine_link) {
+        var _ = this,
+            iFrame = document.createElement('iframe');
+        with (iFrame) {
+            src = engine_link;
+            width = _.get_options().frame_width;
+            height = _.get_options().frame_height;
+        }
+        jQuery('#iframe_container').html(iFrame);
+    },
+
+    /*  Function to check if the form values are valid and execute */
+    /*  @return         void: opens a new tab if a link has been created */
+    hf_check_form: function(event) {
+        var _ = this;
+        if (_.hf_check_dates()) {
+            _.hf_check_roomid(event);
+            _.hf_check_packageid(event);
+            _.hf_check_hotelselect();
+            _.hf_check_engineselect();
+            _.hf_check_password();
+
+            var params = _.hf_create_params(),
+                engine_link = _.hf_create_enginelink(),
+                booIsMobile = portable_devices.isMobile(),
+                booIsTablet = portable_devices.isTablet();
+
+            if (engine_link != null) {
+                if (booIsTablet || booIsMobile) {
+                    window.open(engine_link+params,'_blank');
+                } else {
+                    if (_.get_options().use_inline_iframe) {
+                        _.hf_use_inline_iframe(engine_link+params);
+                    } else {
+                        _.hf_open_fancybox(engine_link+params);
+                    }
+                }
+            }
+        }
+        _.reset();
+    }
+};
+
+var portable_devices = {
+    // Returns true or false
+    hasTouchscreen: function() {
+        return ('ontouchstart' in document.documentElement);
+    },
+    isTablet: function() {
+        return (navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i) && screen.width >= 600);
+    },
+    isMobile: function() {
+        return (navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i) && screen.width <= 600);
+    },
+    isDesktop: function() {
+        var _ = this;
+        return (!_.isTablet() || !_.isMobile());
+    }
+}
+
+
+
+// Animate scroll to anchor on page
+function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+var hc_scripts = {
+
+    toggleMobileQuickbooker : function()
+    {
+        if(jQuery('.js-quickbooker').length > 0) {
+
+            jQuery('.js-toggle-mobile-qb').click(function () {
+                jQuery('.js-quickbooker').toggleClass('m-quickbooker--mobile-active');
+            });
+
+        }
+    },
+
+    setBooker : function() {
+        var $booker = jQuery('.js-quickbooker');
+        if ($booker.length <= 0) {
+            return;
+        }
+
+        $booker.each(function() {
+            var $this = jQuery(this),
+                strIndex = $this.find('input[name="index"]').val(),
+                intHotelId = $this.find('input[name="hotel"]').val(),
+                strLanguage = $this.find('input[name="language"]').val(),
+                hoteliersForm = new hoteliers_form(intHotelId,strLanguage,{
+                    date_format: 'dd/mm/yy',
+                    enable_onSiteOverlay: true,
+                    hoteliers_arrival: 'hf-arrivaldate'+strIndex,
+                    hoteliers_departure: 'hf-departuredate'+strIndex,
+                    hoteliers_submit: 'hf-checkform'+strIndex,
+                }),
+                hoteliersFormOptions = hoteliersForm.get_options();
+            jQuery('#'+hoteliersFormOptions.hoteliers_arrival).datepicker('option','onClose',function() {
+                jQuery('#'+hoteliersFormOptions.hoteliers_departure).datepicker('show');
+            });
+        });
+    },
+
+    deactivateMobileBooker : function() {
+
+        jQuery('.js-trigger').on('click', function () {
+
+            if(jQuery('.m-quickbooker--mobile-active').length > 0) {
+                jQuery('.m-quickbooker--mobile-active').removeClass('m-quickbooker--mobile-active');
+            }
+
+        });
+
+    }
+
+    //toggleNav : function()
+    //{
+    //    if(jQuery('.js-toggle-nav').length > 0) {
+    //
+    //        jQuery('.js-toggle-nav').click(function () {
+    //            if(jQuery('.js-qb').hasClass('h-shown')) {
+    //
+    //                jQuery('.js-qb').addClass('exit');
+    //                setTimeout(function(){
+    //                    jQuery('.js-qb').removeClass('h-shown'),
+    //                        jQuery('.js-qb').removeClass('exit')
+    //                }, 250);
+    //                jQuery('.js-nav').addClass('h-shown');
+    //
+    //            } else if(jQuery('.js-nav').hasClass('h-shown')) {
+    //
+    //                jQuery('.js-nav').addClass('exit');
+    //                setTimeout(function(){
+    //                    jQuery('.js-nav').removeClass('h-shown'),
+    //                        jQuery('.js-nav').removeClass('exit')
+    //                }, 250);
+    //
+    //            } else (
+    //                jQuery('.js-nav').addClass('h-shown')
+    //            )
+    //        });
+    //
+    //    }
+    //},
+
+    //toggleQuickbooker : function()
+    //{
+    //    if(jQuery('.js-toggle-qb').length > 0) {
+    //        jQuery('.js-toggle-qb').click(function () {
+    //            if(jQuery('.js-nav').hasClass('h-shown')) {
+    //                jQuery('.js-nav').addClass('exit');
+    //                setTimeout(function(){
+    //                    jQuery('.js-nav').removeClass('h-shown'),
+    //                        jQuery('.js-nav').removeClass('exit')
+    //                }, 250);
+    //                jQuery('.js-qb').addClass('h-shown');
+    //            } else if(jQuery('.js-qb').hasClass('h-shown')) {
+    //                jQuery('.js-qb').addClass('exit');
+    //                setTimeout(function(){
+    //                    jQuery('.js-qb').removeClass('h-shown'),
+    //                        jQuery('.js-qb').removeClass('exit')
+    //                }, 250);
+    //            } else (
+    //                jQuery('.js-qb').addClass('h-shown')
+    //            )
+    //        });
+    //    }
+    //}
+
+};
+
+jQuery( document ).ready(function() {
+
+    // init custom dropdowns
+    if ( jQuery( '.js-custom-dropdown' ).length > 0 ){
+
+        jQuery(document).click(function(){
+            // Remove all the active classes, menu is closed
+            jQuery( '.js-custom-dropdown' ).removeClass('custom-dropdown--active');
+            return;
+        });
+
+        jQuery( '.js-custom-dropdown' ).on( 'click', function () {
+            return false;
+        });
+
+        // NAVIGATION
+        jQuery( '.js-custom-dropdown-link' ).on( 'click', function () {
+
+            var strActiveLevel  = jQuery(this).attr('data-level-parent');
+            var strActiveGroup  = jQuery(this).attr('data-level-group');
+            var strTopLevel     = jQuery(this).attr('data-level-top');
+
+            // Check for a Top level click
+            if(typeof strTopLevel != 'undefined' && strTopLevel == 'top' ) {
+                // Check if top level is currently active
+                if(jQuery( '.js-custom-dropdown[data-level-type="'+strActiveLevel+'"]').hasClass('custom-dropdown--active')) {
+                    // Remove all the active classes, menu is closed
+                    jQuery( '.js-custom-dropdown' ).removeClass('custom-dropdown--active');
+                    return;
+                }
+            }
+
+            // Check if Clicked Menu isn't already active yet
+            if(! jQuery( '.js-custom-dropdown[data-level-type="'+strActiveLevel+'"]').hasClass('custom-dropdown--active')) {
+                // Remove all active classes on group
+                jQuery( '.js-custom-dropdown[data-level-group="'+strActiveGroup+'"]' ).removeClass( 'custom-dropdown--active' );
+            }
+
+            // Toggle Class on clicked item
+            jQuery( '.js-custom-dropdown[data-level-type="'+strActiveLevel+'"]' ).toggleClass( 'custom-dropdown--active' );
+
+
+        });
+
+    }
+
+    if ( jQuery( '.js-custom-dropdown' ).length > 0 ){
+        $(".js-scroll-to").click(function() {
+
+            var strScrollToTarget = jQuery(this).attr('rel');
+            scrollToAnchor(strScrollToTarget);
+        });
+    }
+
+    $(function() {
+        $( '.js-dlmenu' ).dlmenu({
+            animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
+        });
+    });
+
+
+
+    $(window).on('breakpoint-change', function(e, breakpoint) {
+
+        if(breakpoint === 'bp-small') {
+            console.log('CSS Breakpoint screen-small');
+
+            $(".js-nav--main").unstick();
+        }
+
+        if(breakpoint === 'bp-up-from-small') {
+            console.log('CSS Breakpoint up-from-small');
+
+            $(".js-nav--main").sticky(
+                {
+                    topSpacing: 0,
+                    wrapperClassName: 'sticky-nav',
+                    getWidthFrom: 'body',
+                    zIndex: 5000
+                }
+            );
+        }
+
+    });
+
+    //Toggle nav on palmsized devices
+    //hc_scripts.toggleNav();
+
+    //Toggle qb on palmsized devices
+    //hc_scripts.toggleQuickbooker();
+
+    //Toggle qb on mobile devices
+    hc_scripts.toggleMobileQuickbooker();
+
+    // Set Hoteliers Booker with Onsite Overlay
+    hc_scripts.setBooker();
+
+    // Deactivate
+    hc_scripts.deactivateMobileBooker();
+
+});
+
+

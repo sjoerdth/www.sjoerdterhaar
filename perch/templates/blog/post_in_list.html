@@ -1,0 +1,32 @@
+<perch:before>
+   <ol class="block-list">
+</perch:before>
+    <li>
+        <time class="m-date m-date--muted" datetime="<perch:blog id="postDateTime" format="%m %d %Y" />">
+            <span class="m-date__item"><perch:blog id="postDateTime" format="%d" /></span>
+            <span class="m-date__item"><perch:blog id="postDateTime" format="%b" /></span>
+            <span class="m-date__item"><perch:blog id="postDateTime" format="%Y" /></span>
+        </time>
+        <a class="h4 h4--body-font" href="<perch:blog id="postURL" />" rel="bookmark"><perch:blog id="postTitle" /></a>
+        <!--<perch:if exists="image"><img src="<perch:blog id="image" type="image" width="50" height="50" crop="true" />" alt="<perch:blog id="postTitle" />" /></perch:if>-->
+
+        <!--<div class="description entry-summary">-->
+        <!--<perch:blog id="excerpt" type="textarea" textile="true" />-->
+        <!--<p>Comments: <perch:blog id="postCommentCount"/></p>-->
+        <!--</div>-->
+    </li>
+<perch:after>
+    </ol>
+    <perch:if exists="paging">
+        <div class="paging">
+            Page <perch:blog id="current_page" /> of <perch:blog id="number_of_pages" />
+            <perch:blog id="page_links" encode="false" />
+            <perch:if exists="not_first_page">
+                <a href="<perch:blog id="prev_url" encode="false" />">Previous</a>
+            </perch:if>
+            <perch:if exists="not_last_page">
+                <a href="<perch:blog id="next_url" encode="false" />">Next</a>
+            </perch:if>
+        </div>
+    </perch:if>
+</perch:after>
