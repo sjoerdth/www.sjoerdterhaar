@@ -22,18 +22,37 @@
             </div>
         </div>
 
-        <div class="m-progress-label m-progress-label--one-quarter">
-            25%
-        </div>
-        <div class="m-progress-label m-progress-label--one-half">
-            50%
-        </div>
-        <div class="m-progress-label m-progress-label--three-quarters">
-            75%
-        </div>
-        <div class="m-progress-label m-progress-label--finish">
-            end
-        </div>
+
+
+
+
+        <perch:if exists="progress_25">
+            <div class="m-progress-label m-progress-label--one-quarter">
+            <perch:blog id="progress_25" type="checkbox" label="Progress 25%" value="25%" />
+            </div>
+        </perch:if>
+
+
+        <perch:if exists="progress_50">
+            <div class="m-progress-label m-progress-label--one-half">
+            <perch:blog id="progress_50" type="checkbox" label="Progress 50%" value="50%" />
+            </div>
+        </perch:if>
+
+
+        <perch:if exists="progress_75">
+            <div class="m-progress-label m-progress-label--three-quarters">
+            <perch:blog id="progress_75" type="checkbox" label="Progress 75%" value="75%" />
+            </div>
+        </perch:if>
+
+
+        <perch:if exists="progress_100">
+            <div class="m-progress-label m-progress-label--finish">
+            <perch:blog id="progress_100" type="checkbox" label="Progress 100%" value="end" />
+            </div>
+        </perch:if>
+
 
     </div>
 
@@ -54,26 +73,26 @@
                     </header>
                 </div>
 
-                    <perch:blocks>
+                    <perch:blocks order="4">
 
                         <perch:block label="Plain text with dropcap" type="b_plainTextDropcap">
-                            <perch:template path="blog/blocks/plaintext-dc.html" rescope="parent" />
+                            <perch:template path="content/blocks/plaintext-dc.html" rescope="parent" />
                         </perch:block>
 
                         <perch:block label="Plain text" type="b_plainText">
-                            <perch:template path="blog/blocks/plaintext.html" rescope="parent" />
+                            <perch:template path="content/blocks/plaintext.html" rescope="parent" />
                         </perch:block>
 
                         <perch:block label="Pull quote" type="b_pullquote">
-                            <perch:template path="blog/blocks/pullquote.html" rescope="parent" />
+                            <perch:template path="content/blocks/pullquote.html" rescope="parent" />
                         </perch:block>
 
                         <perch:block label="Media - text | image" type="b_mediaTextImage">
-                            <perch:template path="blog/blocks/media-text-image.html" rescope="parent" />
+                            <perch:template path="content/blocks/media-text-image.html" rescope="parent" />
                         </perch:block>
 
                         <perch:block label="Media - image | text" type="b_mediaImageText">
-                            <perch:template path="blog/blocks/media-image-text.html" rescope="parent" />
+                            <perch:template path="content/blocks/media-image-text.html" rescope="parent" />
                         </perch:block>
 
                     </perch:blocks>

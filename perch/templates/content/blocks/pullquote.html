@@ -1,0 +1,14 @@
+<div class="text-constrain">
+    <blockquote class="o-pull-quote">
+        <p class="o-pull-quote__body">
+            <perch:content id="c_quote" label="Quote" type="text" />
+        </p>
+    <perch:if exists="c_cite">
+        <footer>
+            <cite class="o-pull-quote__cite">
+                <perch:content id="c_cite" label="cite" type="text" />
+            </cite>
+        </footer>
+    </perch:if>
+    </blockquote>
+</div>
