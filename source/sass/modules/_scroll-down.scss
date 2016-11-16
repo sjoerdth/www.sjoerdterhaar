@@ -11,7 +11,7 @@
     border-radius: 50%;
     border: 2px solid white;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         top: calc( #{$masthead-height} - ( #{$sb-baseline} + #{$scroll-down-button-size} ) - #{$drawer-height} );
     }
 }

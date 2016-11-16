@@ -9,7 +9,7 @@
 
     //background: rgba(palette(brand-first), 0.8);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         top: auto;
         right: 0;
         bottom: 0;

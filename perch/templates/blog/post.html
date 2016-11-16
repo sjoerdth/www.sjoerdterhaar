@@ -1,48 +1,86 @@
-<h1>
-    <perch:blog id="postTitle" type="text" label="Blog Title" required="true" size="xl autowidth" order="1" />
-</h1>
-<perch:if exists="blogPostSubtitle">
-<span class="subheading h3">
-    <perch:blog id="blogPostSubtitle" type="text" label="Blog Subtitle" size="xl autowidth" order="2" />
-</span>
-</perch:if>
+<article class="m-article o-grid o-grid--modern o-grid--equal-cells">
 
-<perch:blocks>
-
-    <perch:block label="Plain text with dropcap" type="b_plainTextDropcap">
-        <div class="drop-cap">
-            <perch:blog id="c_plainTextDropcap" label="Plain text with dropcap" type="textarea" editor="tinymce" html="true" />
-        </div>
-    </perch:block>
-
-    <perch:block label="Plain text" type="b_plainText">
-        <perch:blog id="c_plainText" label="Plain text" type="textarea" editor="tinymce" html="true" />
-    </perch:block>
-
-    <perch:block label="Blockquote" type="b_blockquote">
-        <perch:template path="blog/blocks/blockquote.html" />
-    </perch:block>
-
-    <perch:block label="Media - text | image" type="b_mediaTextImage">
-        <div class="o-media">
-            <div class="o-media__body col-1of2">
-                <perch:blog id="c_mediaTextLeft" label="Media text left" type="textarea" size="l" editor="tinymce" html="true" />
-            </div>
-            <div class="o-media__img col-1of2">
-                <img src="<perch:blog type="image" id="c_mediaImageRight" label="Media image right" />" alt="<perch:blog id="c_mediaImageRightAlt" label="Image alt" type="text" />">
+    <div class="o-grid__cell o-grid__cell--fixed-small h-pos-relative">
+        <div class="o-ratio">
+            <div class="o-ratio__size o-ratio__size--square">
+                <div class="m-article--date o-ratio__content h-v-align-center-flex">
+                    <time datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="3" divider-before="Publishdate" divider-after="Article" />">
+                        <span class="m-date"><perch:blog id="postDateTime" type="date" time="true" format="%d" /></span>
+                        <span class="m-date"><perch:blog id="postDateTime" type="date" time="true" format="%b" /></span>
+                        <span class="m-date"><perch:blog id="postDateTime" type="date" time="true" format="%Y" /></span>
+                    </time>
+                </div>
             </div>
         </div>
-    </perch:block>
 
-    <perch:block label="Media - image | text" type="b_mediaImageText">
-        <div class="o-media o-media--rev">
-            <div class="o-media__body col-1of2">
-                <perch:blog id="c_mediaTextRight" label="Media text right" type="textarea" size="l" editor="tinymce" html="true" />
-            </div>
-            <div class="o-media__img col-1of2">
-                <img src="<perch:blog type="image" id="c_mediaImageLeft" label="Media image left" />" alt="<perch:blog id="c_mediaImageLeftAlt" label="Image alt" type="text" />">
+
+        <div class="o-ratio">
+            <div class="o-ratio__size o-ratio__size--square">
+                <div class="m-back-link o-ratio__content">
+                    <a class="m-back-link__link h-v-align-center-flex" href="/blog"><span class="m-back-link__body"><svg class="m-svg-icon-inline" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>back to blog<span></a>
+                </div>
             </div>
         </div>
-    </perch:block>
 
-</perch:blocks>
+        <div class="m-progress-label m-progress-label--one-quarter">
+            25%
+        </div>
+        <div class="m-progress-label m-progress-label--one-half">
+            50%
+        </div>
+        <div class="m-progress-label m-progress-label--three-quarters">
+            75%
+        </div>
+        <div class="m-progress-label m-progress-label--finish">
+            end
+        </div>
+
+    </div>
+
+    <div class="o-grid__cell">
+        <div class="m-wrapper m-wrapper--shadow">
+
+            <div class="m-article--body">
+                <div class="text-constrain">
+                    <header>
+                        <h1>
+                            <perch:blog id="postTitle" type="text" label="Blog Title" required="true" size="xl autowidth" order="1" />
+                        </h1>
+                    <perch:if exists="blogPostSubtitle">
+                        <span class="subheading h3">
+                            <perch:blog id="blogPostSubtitle" type="text" label="Blog Subtitle" size="xl autowidth" order="2" />
+                        </span>
+                    </perch:if>
+                    </header>
+                </div>
+
+                    <perch:blocks>
+
+                        <perch:block label="Plain text with dropcap" type="b_plainTextDropcap">
+                            <perch:template path="blog/blocks/plaintext-dc.html" rescope="parent" />
+                        </perch:block>
+
+                        <perch:block label="Plain text" type="b_plainText">
+                            <perch:template path="blog/blocks/plaintext.html" rescope="parent" />
+                        </perch:block>
+
+                        <perch:block label="Pull quote" type="b_pullquote">
+                            <perch:template path="blog/blocks/pullquote.html" rescope="parent" />
+                        </perch:block>
+
+                        <perch:block label="Media - text | image" type="b_mediaTextImage">
+                            <perch:template path="blog/blocks/media-text-image.html" rescope="parent" />
+                        </perch:block>
+
+                        <perch:block label="Media - image | text" type="b_mediaImageText">
+                            <perch:template path="blog/blocks/media-image-text.html" rescope="parent" />
+                        </perch:block>
+
+                    </perch:blocks>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</article>

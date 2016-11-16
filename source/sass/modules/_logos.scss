@@ -7,7 +7,7 @@
 .m-logo--choco {
     max-width: 185px;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         position: absolute;
         top: $sb-baseline / 2;
         left: $sb-baseline / 2;
@@ -15,7 +15,7 @@
 }
 
 .m-logo--choco--base {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none;
     }
 }
@@ -23,7 +23,7 @@
 .m-logo--choco--small {
     display: none;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: block;
         max-width: 150px;
     }
@@ -34,11 +34,11 @@
     top: $sb-baseline / 2;
     left: $sb-baseline;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none;
     }
 
-    @include media($sb-breakpoint__large, null) {
+    @include media($sb-bp__large, null) {
         .m-logo-sticky-bar__medium {
             display: none;
         }
@@ -47,7 +47,7 @@
         }
     }
 
-    @include media(null, $sb-breakpoint__large) {
+    @include media(null, $sb-bp__large) {
         .m-logo-sticky-bar__medium {
             display: block;
         }

@@ -1,0 +1,39 @@
+.o-pull-quote {
+    display: block;
+
+    margin-top: $sb-baseline;
+    margin-bottom: $sb-baseline;
+
+    padding: $sb-baseline;
+
+    // We don't want quotes surrounding the entire object, because the closing quote would then be after the cite
+    &:before,
+    &:after {
+        display: none;
+    }
+}
+
+    .o-pull-quote__body {
+        margin-bottom: $sb-baseline / 2;
+
+        // Pullquote should stand out so make larger than base font
+        font-size: calc(#{$sb-fontsize} * 1.5);
+        line-height: calc(#{$sb-baseline} * 1.5);
+        font-style: italic;
+
+        // Reset quote to actual quoted part
+        &:before {
+            content: open-quote;
+        }
+        &:after {
+            content: close-quote;
+        }
+    }
+
+    .o-pull-quote__cite {
+        font-style: normal;
+
+        &:before {
+            content: "-";
+        }
+    }

@@ -1,5 +1,28 @@
-.o-media--palm {
-    @include media(null, $sb-breakpoint__small) {
+.o-media--article {
+    padding: $sb-baseline;
+
+    border-radius: $sb-border-radius;
+    background: rgba(palette(brand-grey, x-light), 0.35);
+}
+
+.o-media--small {
+    @include media(null, $sb-bp__small) {
+        flex-direction: column;
+
+        .o-media__img {
+            order: 1;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .o-media__body {
+            order: 2;
+        }
+    }
+}
+
+.o-media--medium {
+    @include media(null, $sb-bp__medium) {
         flex-direction: column;
 
         .o-media__img {
@@ -27,7 +50,7 @@
 
 .o-media__body,
 .o-media__body--soft-sides {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         padding: $sb-baseline;
     }
 }

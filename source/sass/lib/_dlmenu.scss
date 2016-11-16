@@ -7,7 +7,7 @@ $drawer-height: $sb-baseline *3;
     //perspective: 1000px;
     //perspective-origin: 50% 200%;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         position: static;
     }
 
@@ -25,7 +25,7 @@ $drawer-height: $sb-baseline *3;
                 padding: $sb-baseline / 2;
                 color: palette(brand-white);
 
-                @include media(null, $sb-breakpoint__small) {
+                @include media(null, $sb-bp__small) {
                     padding: $sb-baseline $sb-baseline / 2;
                     color: palette(brand-white) !important;
                 }
@@ -36,7 +36,7 @@ $drawer-height: $sb-baseline *3;
 }
 
 .dl-menuwrapper--dt-active {
-    @include media($sb-breakpoint__small, null) {
+    @include media($sb-bp__small, null) {
         position: static;
 
         .dl-trigger {
@@ -58,7 +58,7 @@ $drawer-height: $sb-baseline *3;
 }
 
 .dl-menuwrapper__mob-item {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         flex: 1 1 auto;
 
         border-right: 1px solid palette(brand-white, dark);
@@ -85,12 +85,12 @@ $drawer-height: $sb-baseline *3;
     outline: none;
 
     &:hover {
-        @include media($sb-breakpoint__small, null) {
+        @include media($sb-bp__small, null) {
             background: rgba( palette( brand-grey ), 0.8 );
         }
     }
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         height: $drawer-height;
         width: 100%;
 
@@ -116,7 +116,7 @@ $drawer-height: $sb-baseline *3;
         border-color: palette(brand-white) transparent;
         pointer-events: none;
 
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             //transform: rotate(180deg);
             display: none;
         }
@@ -126,7 +126,7 @@ $drawer-height: $sb-baseline *3;
     //&:hover {
     //    background: rgba( palette( brand-grey ), 0.8 );
     //
-    //    @include media(null, $sb-breakpoint__small) {
+    //    @include media(null, $sb-bp__small) {
     //        background: palette( brand-grey );
     //    }
     //}
@@ -182,7 +182,7 @@ $drawer-height: $sb-baseline *3;
 .dl-active {
     background: rgba( palette( brand-grey ), 0.8 );
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         background: palette( brand-grey );
         position: static;
 
@@ -240,7 +240,7 @@ $drawer-height: $sb-baseline *3;
     pointer-events: none;
     backface-visibility: hidden;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         bottom: $drawer-height;
         left: 0;
 
@@ -251,7 +251,7 @@ $drawer-height: $sb-baseline *3;
     }
 
     li {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             background: palette( brand-grey );
         }
     }
@@ -265,7 +265,7 @@ $drawer-height: $sb-baseline *3;
     opacity: 1;
     pointer-events: auto;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: flex;
         flex-direction: column-reverse;
     }
@@ -296,7 +296,7 @@ All this is done for any sub-level being entered.
 .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
     display: block;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: flex;
         flex-direction: column-reverse;
     }

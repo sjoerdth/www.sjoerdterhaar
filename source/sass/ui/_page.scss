@@ -2,17 +2,17 @@ body {
     background: palette(grey, x-light);
     color: palette(grey, dark);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
 
     }
 
 	// create breakpoints for use in JS
 	&:after {
-		@include media(null, $sb-breakpoint__small) {
+		@include media(null, $sb-bp__small) {
 			content: "bp-small";
 			display: none;
 		}
-		@include media($sb-breakpoint__small, null) {
+		@include media($sb-bp__small, null) {
 			content: "bp-up-from-small";
 			display: none;
 		}

@@ -41,17 +41,18 @@ $sb-grid-end: 12 !default;
 /*
     Define breakpoints for responsive
 */
-$sb-breakpoint__large:     68.750em !default; // Small desktop to large desktop
-$sb-breakpoint__medium:    50em !default; // Portrait tablet to landscape tablet
-$sb-breakpoint__small:     30em !default; // Portrait mobile to landscape mobile
+$sb-bp__large:     68.750em !default; // Small desktop to large desktop
+$sb-bp__medium:    50em !default; // Portrait tablet to landscape tablet
+$sb-bp__small:     30em !default; // Portrait mobile to landscape mobile
+
 /*
     Set array containing all breakpoints in descending order, these will be used
     to create the media-queries to set the width of your grid columns.
 */
-$sb-breakpoints: (
-    large: $sb-breakpoint__large,
-    medium: $sb-breakpoint__medium,
-    small: $sb-breakpoint__small
+$sb-bps: (
+    large: $sb-bp__large,
+    medium: $sb-bp__medium,
+    small: $sb-bp__small
 ) !default;
 
 /***

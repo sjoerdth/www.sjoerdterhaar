@@ -98,17 +98,17 @@ img {
     MEDIA QUERY
 
     min-width and max-width:
-    @include media($sb-breakpoint__small, $sb-breakpoint__large) {
+    @include media($sb-bp__small, $sb-bp__large) {
       color: red;
     }
 
     min-width
-    @include media($sb-breakpoint__small, null) {
+    @include media($sb-bp__small, null) {
       color: red;
     }
 
     max-width
-    @include media(null, $sb-breakpoint__large) {
+    @include media(null, $sb-bp__large) {
       color: red;
     }
 ***/
@@ -620,7 +620,7 @@ textarea:focus {
     -> Set array containing all breakpoints in descending order, these will be used
     to create the media-queries to set the width of your grid columns.
 
-    $sb-breakpoints: (
+    $sb-bps: (
         classname: breakpoint,
     );
 */
@@ -971,10 +971,6 @@ h1, .h1 {
 */
 p {
   margin-bottom: 1.96rem;
-}
-
-p:last-child {
-  margin-bottom: 0;
 }
 
 /*
@@ -1393,7 +1389,7 @@ blockquote:after {
   }
 }
 
-@media (max-width: 55em) {
+@media (max-width: 60em) {
   .medium-col-1of1 {
     width: 100%;
   }
@@ -1725,11 +1721,7 @@ blockquote:after {
   margin-left: -1.96rem;
 }
 
-.o-grid--gutter.o-grid--modern > .o-grid__cell {
-  margin-left: 1.96rem;
-}
-
-.o-grid--gutter.o-grid--classic > .o-grid__cell {
+.o-grid--gutter > .o-grid__cell {
   padding-left: 1.96rem;
 }
 
@@ -1940,6 +1932,40 @@ blockquote:after {
   margin-left: -9999em;
 }
 
+.o-pull-quote {
+  display: block;
+  margin-top: 1.96rem;
+  margin-bottom: 1.96rem;
+  padding: 1.96rem;
+}
+
+.o-pull-quote:before, .o-pull-quote:after {
+  display: none;
+}
+
+.o-pull-quote__body {
+  margin-bottom: 0.98rem;
+  font-size: calc(1.4rem * 1.5);
+  line-height: calc(1.96rem * 1.5);
+  font-style: italic;
+}
+
+.o-pull-quote__body:before {
+  content: open-quote;
+}
+
+.o-pull-quote__body:after {
+  content: close-quote;
+}
+
+.o-pull-quote__cite {
+  font-style: normal;
+}
+
+.o-pull-quote__cite:before {
+  content: "-";
+}
+
 /*
 
 <div class="o-ratio">
@@ -2028,6 +2054,12 @@ a {
 */
 html {
   font-size: 100%;
+}
+
+@media only screen and (max-width: 60em) {
+  html {
+    font-size: 90%;
+  }
 }
 
 @media only screen and (max-width: 45em) {
@@ -2145,29 +2177,6 @@ h6, .h6, .deca {
 */
 .drop-cap > p:first-child:first-letter {
   color: #ff179b;
-}
-
-blockquote {
-  position: relative;
-  margin: 1.96rem 1.96rem 1.96rem 3.92rem;
-  padding: 1.96rem;
-  border: 1px solid #e5e5e5;
-  border-left: 10px solid #14bccc;
-  font-style: italic;
-  font-size: 1.2rem;
-  border-radius: 3px;
-  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-blockquote:before {
-  position: absolute;
-  left: -3.92rem;
-  font-size: 5rem;
-  color: #14bccc;
-}
-
-blockquote:after {
-  display: none;
 }
 
 .subheading {
@@ -2328,6 +2337,54 @@ blockquote:after {
 
 .m-masthead__image {
   display: none !important;
+}
+
+.m-progress-label {
+  display: block;
+  position: absolute;
+  right: 0.98rem;
+  width: 100%;
+  max-width: 100px;
+  padding: 0.98rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  background: #ffc517;
+  border-radius: 3px;
+}
+
+.m-progress-label:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(213, 158, 30, 0);
+  border-left-color: #ffc517;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.m-progress-label--start {
+  position: static;
+}
+
+.m-progress-label--one-quarter {
+  top: 25%;
+}
+
+.m-progress-label--one-half {
+  top: 50%;
+}
+
+.m-progress-label--three-quarters {
+  top: 75%;
+}
+
+.m-progress-label--finish {
+  bottom: 0;
 }
 
 .m-svg-icon-white path {
@@ -2501,6 +2558,62 @@ blockquote:after {
   color: #0b666f;
 }
 
+.o-media--article {
+  padding: 1.96rem;
+  border-radius: 3px;
+  background: rgba(191, 188, 189, 0.35);
+}
+
+@media only screen and (max-width: 45em) {
+  .o-media--small {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .o-media--small .o-media__img {
+    -ms-flex-order: 1;
+        order: 1;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .o-media--small .o-media__body {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
+@media only screen and (max-width: 60em) {
+  .o-media--medium {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .o-media--medium .o-media__img {
+    -ms-flex-order: 1;
+        order: 1;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .o-media--medium .o-media__body {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
+.o-media__body--soft-sides {
+  padding-left: 1.96rem;
+}
+
+.o-media--rev .o-media__body--soft-sides {
+  padding-right: 1.96rem;
+  padding-left: 0.98rem;
+}
+
+@media only screen and (max-width: 45em) {
+  .o-media__body,
+  .o-media__body--soft-sides {
+    padding: 1.96rem;
+  }
+}
+
 .o-nav {
   position: absolute;
   top: 0;
@@ -2564,6 +2677,26 @@ blockquote:after {
 .o-overlay--fade-in {
   position: static;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
+}
+
+.o-pull-quote {
+  position: relative;
+  margin-left: 3.92rem;
+  border: 1px solid #e5e5e5;
+  border-left: 10px solid #14bccc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.o-pull-quote__body:before {
+  position: absolute;
+  left: -3.92rem;
+  font-size: 5rem;
+  color: #14bccc;
+}
+
+.o-pull-quote__body:after {
+  display: none;
 }
 
 body {
@@ -2639,7 +2772,7 @@ a:hover, a:active {
   }
 }
 
-@media (max-width: 55em) {
+@media (max-width: 60em) {
   .test-box--responsive:before {
     content: "Medium";
     background: green;

@@ -8,7 +8,7 @@
 
     //background: rgba(black, 0.25);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         padding: 0;
     }
 
@@ -28,7 +28,7 @@
     position: relative;
     animation: appearUp .25s ease-in-out;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: flex;
         align-items: stretch;
 
@@ -52,7 +52,7 @@
             background: rgba( palette( brand-grey ), 0.8 );
         }
 
-        @include media($sb-breakpoint__small, $sb-breakpoint__large) {
+        @include media($sb-bp__small, $sb-bp__large) {
             padding: $sb-baseline $sb-baseline / 4;
         }
     }

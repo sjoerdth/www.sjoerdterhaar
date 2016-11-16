@@ -4,7 +4,11 @@ $header-stack: Cardo, tahoma, serif;
 html {
     font-size: 100%;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__medium) {
+        font-size: 90%;
+    }
+
+    @include media(null, $sb-bp__small) {
         font-size: 85%;
     }
 
@@ -107,34 +111,6 @@ h6, .h6, .deca {
         }
     }
 }
-
-blockquote {
-    position: relative;
-
-    margin: $sb-baseline $sb-baseline $sb-baseline $sb-baseline*2;
-
-    padding: $sb-baseline;
-    border: 1px solid palette(grey, x-light);
-    border-left: 10px solid palette(brand-blue);
-
-    font-style: italic;
-    font-size: 1.2rem;
-
-    border-radius: $sb-border-radius;
-    box-shadow: $base-shadow;
-
-    &:before {
-        position: absolute;
-        left: -$sb-baseline*2;
-
-        font-size: 5rem;
-        color: palette(brand-blue);
-    }
-    &:after {
-        display: none;
-    }
-}
-
 
 .subheading {
     display: block;

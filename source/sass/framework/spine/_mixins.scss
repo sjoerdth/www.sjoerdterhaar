@@ -17,17 +17,17 @@
     MEDIA QUERY
 
     min-width and max-width:
-    @include media($sb-breakpoint__small, $sb-breakpoint__large) {
+    @include media($sb-bp__small, $sb-bp__large) {
       color: red;
     }
 
     min-width
-    @include media($sb-breakpoint__small, null) {
+    @include media($sb-bp__small, null) {
       color: red;
     }
 
     max-width
-    @include media(null, $sb-breakpoint__large) {
+    @include media(null, $sb-bp__large) {
       color: red;
     }
 ***/

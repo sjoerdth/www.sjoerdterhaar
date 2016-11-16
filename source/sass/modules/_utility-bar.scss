@@ -7,7 +7,7 @@
     border-bottom: 1px solid palette(brand-white);
     color: palette(brand-white);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         position: static;
 
         &:after {
@@ -22,7 +22,7 @@
         width: 25vw;
         min-width: 200px;
 
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             float: left;
         }
     }
@@ -30,7 +30,7 @@
     //.m-utility-bar__actions-box {
     //    position: relative;
     //
-    //    @include media(null, $sb-breakpoint__small) {
+    //    @include media(null, $sb-bp__small) {
     //        position: static;
     //    }
     //}
@@ -41,7 +41,7 @@
         right: 0;
         transform: translateY(-50%);
 
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             //position: relative;
             justify-content: flex-end;
             position: static;

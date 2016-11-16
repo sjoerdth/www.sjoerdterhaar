@@ -4,7 +4,7 @@
     color: white;
     //background: rgba( palette(brand-second), 0.9 );
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none;
     }
 

@@ -8,18 +8,9 @@
     .o-grid--gutter {
         margin-left: $sb-baseline * -1;
 
-        &.o-grid--modern {
-            > .o-grid__cell {
-                margin-left: $sb-baseline;
-            }
+        > .o-grid__cell {
+            padding-left: $sb-baseline;
         }
-
-        &.o-grid--classic {
-            > .o-grid__cell {
-                padding-left: $sb-baseline;
-            }
-        }
-
     }
 
     .o-grid--modern {
@@ -40,7 +31,7 @@
     }
 
     .o-grid--modern-vertical-small {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             flex-direction: column;
 
             margin-left: 0;

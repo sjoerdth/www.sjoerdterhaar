@@ -5,7 +5,7 @@
     font-size: 1rem;
     white-space: nowrap;
 
-    @media (max-width: $sb-breakpoint__small) {
+    @media (max-width: $sb-bp__small) {
         white-space: normal;
     }
 

@@ -115,13 +115,13 @@
 }
 
 .h-show-small {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: block !important;
     }
 }
 
 .h-hidden-small {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none !important;
     }
 }

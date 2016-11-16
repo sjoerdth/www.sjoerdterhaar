@@ -92,9 +92,9 @@ $sb-ratio--exp: $sb-ratio;
 p {
     margin-bottom: $sb-baseline;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+    //&:last-child {
+    //    margin-bottom: 0;
+    //}
 }
 
 /*

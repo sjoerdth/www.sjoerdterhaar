@@ -70,6 +70,7 @@
 @import "framework/objects/nav";
 //@import "framework/objects/notification-box";
 @import "framework/objects/overlay";
+@import "framework/objects/pull-quote";
 @import "framework/objects/ratio";
 
 // Framework
@@ -110,6 +111,7 @@
 //@import "modules/quickbooker";
 //@import "modules/nav-touch";
 //@import "modules/products";
+@import "modules/progress-label";
 //@import "modules/read-more";
 //@import "modules/scroll-down";
 //@import "modules/social";
@@ -144,9 +146,10 @@
     //@import "ui/objects/fancybox";
     //@import "ui/objects/forms";
     @import "ui/objects/grid";
-    //@import "ui/objects/media";
+    @import "ui/objects/media";
     @import "ui/objects/nav";
     @import "ui/objects/overlay";
+    @import "ui/objects/pull-quote";
     //@import "ui/objects/ratio";
     //
     //// Modules
@@ -165,15 +168,15 @@
 .test-box--responsive {
     &:before{
         color: white;
-        @media (max-width: $sb-breakpoint__large) {
+        @media (max-width: $sb-bp__large) {
             content: "Large";
             background: blue;
         }
-        @media (max-width: $sb-breakpoint__medium) {
+        @media (max-width: $sb-bp__medium) {
             content: "Medium";
             background: green;
         }
-        @media (max-width: $sb-breakpoint__small) {
+        @media (max-width: $sb-bp__small) {
             content: "Small";
             background: red;
         }

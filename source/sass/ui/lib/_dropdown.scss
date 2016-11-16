@@ -50,7 +50,7 @@
 
     border: 1px solid palette(brand-gold);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         position: static;
 
         border: 0;
@@ -66,7 +66,7 @@
     }
 
     .custom-dropdown__key {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             display: none;
         }
     }
@@ -75,7 +75,7 @@
 .custom-dropdown__options--booker {
     width: 350px;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         position: static;
 
         width: auto;
@@ -83,7 +83,7 @@
     }
 
     .custom-dropdown {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             position: static;
         }
     }
@@ -130,7 +130,7 @@
 }
 
     .custom-dropdown__options--nav {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             //border-bottom: 1px solid rgba(0,0,0,0.2);
             max-height: 400px;
         }
@@ -170,7 +170,7 @@
     .custom-dropdown__key--main-nav {
         padding: $sb-baseline 25px $sb-baseline $sb-baseline;
 
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             display: none;
             position: fixed;
             bottom: $drawer-height;

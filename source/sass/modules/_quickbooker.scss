@@ -4,7 +4,7 @@
 
     color: palette(brand-white);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         //default hide on mobile devices
         //display: none;
 

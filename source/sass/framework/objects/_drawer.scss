@@ -7,7 +7,7 @@ $drawer-height: $sb-baseline *3;
 .o-drawer {
     display: none;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         //display: flex;
     }
     position: fixed;

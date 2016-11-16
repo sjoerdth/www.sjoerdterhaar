@@ -2,7 +2,7 @@
     display: none;
     @extend .cf;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: block;
         position: fixed;
         z-index: z(nav);
@@ -15,7 +15,7 @@
 
 .m-nav-touch--over-nav {
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none;
         z-index: z(overlay)+1;
 
@@ -26,13 +26,13 @@
 }
 
 .m-nav-touch--inactive {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none;
     }
 }
 
     .m-nav-touch__item {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             position: relative;
             display: block;
             float: right;
@@ -54,7 +54,7 @@
     }
 
     .m-nav-touch__action {
-        @include media(null, $sb-breakpoint__small) {
+        @include media(null, $sb-bp__small) {
             @include vertical-align();
 
             background: none;

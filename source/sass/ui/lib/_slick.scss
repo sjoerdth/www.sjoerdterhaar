@@ -10,7 +10,7 @@
     outline: none;
     opacity: 0.8;
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         display: none;
     }
 

@@ -10,7 +10,7 @@
 .ui-datepicker {
     box-shadow: 0 0 5px 1px rgba(black, .5);
 
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         max-width: 100%;
         width: 100vw;
         left: 0 !important;
@@ -54,13 +54,13 @@
     &-next {
         right: .19rem!important;
         top: calc(50% - 11px) !important;
-        //@include media($sb-breakpoint__small) {
+        //@include media($sb-bp__small) {
         //    right: .1rem!important;
         //    top: calc(50% - 9px) !important;
         //    height: 18px!important;
         //    width: 18px!important;
         //}
-        //@include media($sb-breakpoint__medium) {
+        //@include media($sb-bp__medium) {
         //    right: .1rem!important;
         //    top: calc(50% - 10px) !important;
         //    height: 20px!important;
@@ -74,13 +74,13 @@
     &-prev {
         left: .19rem!important;
         top: calc(50% - 11px) !important;
-        //@include media($sb-breakpoint__small) {
+        //@include media($sb-bp__small) {
         //    left: .1rem!important;
         //    top: calc(50% - 9px) !important;
         //    height: 18px!important;
         //    width: 18px!important;
         //}
-        //@include media($sb-breakpoint__medium) {
+        //@include media($sb-bp__medium) {
         //    left: .1rem!important;
         //    top: calc(50% - 10px) !important;
         //    height: 20px!important;
@@ -164,7 +164,7 @@
 
 .ui-datepicker td span,
 .ui-datepicker td a {
-    @include media(null, $sb-breakpoint__small) {
+    @include media(null, $sb-bp__small) {
         padding: 1rem;
     }
 }
