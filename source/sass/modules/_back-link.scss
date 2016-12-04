@@ -1,5 +1,5 @@
 .m-back-link {
-    background: palette(brand-blue);
+
 }
 
     .m-back-link__link {
@@ -8,6 +8,10 @@
         padding-left: $sb-baseline;
         text-decoration: none;
         color: white;
+
+        @include media(null, $sb-bp__small) {
+            padding: $sb-baseline / 2;
+        }
 
         &:hover {
             color: white;

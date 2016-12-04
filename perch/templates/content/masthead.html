@@ -1,0 +1,13 @@
+<header class="m-masthead">
+    <perch:blog type="image" id="c_mastheadBlog" label="Masthead" />
+
+    <perch:if exists="c_mastheadBlog">
+        Blog masthead
+        <perch:blog type="image" id="c_mastheadBlog" label="Masthead" />
+        <perch:else />
+        Default page masthead
+        <perch:content type="image" id="c_mastheadPage" label="Masthead" />
+    </perch:if>
+
+</header>
+<!-- end:masthead -->

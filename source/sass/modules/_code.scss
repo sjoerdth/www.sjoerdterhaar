@@ -1,9 +1,17 @@
 .m-code {
-    margin-bottom: $sb-baseline;
+    max-height: 20rem;
+    overflow: auto;
 
+    padding: $sb-baseline / 2;
+
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.1rem;
     color: white;
 
     border-radius: $sb-border-radius;
     background: palette(grey, x-dark);
 }
+
+    .m-code__link {
+
+    }

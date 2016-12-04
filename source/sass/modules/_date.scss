@@ -11,18 +11,12 @@
     font-size: 1rem;
 }
 
-    .m-date__item {
+.m-date--post {
+    @include media(null, $sb-bp__small) {
         display: inline-block;
     }
+}
 
-    .m-date__item--sinlge-line {
-        display: block;
-    }
-
-    .m-date__month {
-        display: block;
-    }
-
-    .m-date__day {
-        display: block;
-    }
+.m-date--comment {
+    border-bottom: 1px solid palette(brand-grey, x-light);
+}

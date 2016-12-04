@@ -1,0 +1,24 @@
+.m-comments {
+    display: block;
+
+    list-style: none;
+}
+
+    .m-comments__comment {
+        padding: $sb-baseline;
+
+        margin-bottom: $sb-baseline;
+
+        border-radius: $sb-border-radius;
+
+        background: white;
+
+        box-shadow: $base-shadow;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }

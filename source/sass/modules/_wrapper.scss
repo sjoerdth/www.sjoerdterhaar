@@ -1,6 +1,7 @@
 .m-wrapper {
     width: 100%;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .m-wrapper--constrain {
@@ -14,6 +15,11 @@
 .m-wrapper--soft-sides {
     padding-right: $sb-baseline;
     padding-left: $sb-baseline;
+
+    @include media(null, $sb-bp__small) {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
 }
 
 .m-wrapper--shadow {

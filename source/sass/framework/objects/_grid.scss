@@ -18,7 +18,7 @@
         flex-direction: row;
 
         &.o-grid--equal-cells {
-            .o-grid__cell {
+            > .o-grid__cell {
                 flex: 1;
             }
         }
@@ -36,8 +36,8 @@
 
             margin-left: 0;
 
-            .o-grid__cell {
-                margin-left: 0;
+            > .o-grid__cell {
+                padding-left: 0;
                 margin-bottom: $sb-baseline;
 
                 &:last-child {

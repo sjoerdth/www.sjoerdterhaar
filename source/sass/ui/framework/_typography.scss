@@ -2,7 +2,11 @@ $body-stack: Roboto, arial, sans-serif;
 $header-stack: Cardo, tahoma, serif;
 
 html {
-    font-size: 100%;
+    font-size: 105%;
+
+    @include media(null, $sb-bp__large) {
+        font-size: 100%;
+    }
 
     @include media(null, $sb-bp__medium) {
         font-size: 90%;
@@ -70,13 +74,13 @@ h2, .h2 {
 
 
 h1, .h1, .tera {
-    line-height: $sb-baseline * 2;
+    line-height: $sb-baseline * 3;
 }
 h2, .h2, .giga {
     line-height: $sb-baseline * 2;
 }
 h3, .h3, .mega {
-    line-height: $sb-baseline * 1.25;
+    line-height: $sb-baseline * 1.5;
 }
 h4, .h4, .kilo {
     line-height: $sb-baseline * 1.25;
@@ -99,6 +103,10 @@ h6, .h6, .deca {
     margin-left: auto;
     max-width: 40rem;
     @extend .cf;
+}
+
+.text-constrain--push-down {
+    margin-bottom: $sb-baseline;
 }
 
 /*

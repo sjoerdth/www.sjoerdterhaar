@@ -1,0 +1,8 @@
+<div class="text-constrain text-constrain--push-down">
+    <pre class="m-code">
+        <perch:content id="c_code" label="Code" type="textarea" />
+    </pre>
+    <perch:if exists="c_codeLinkHref">
+        <a class="o-button o-button--tiny o-button--flat-pink" href="<perch:content id="c_codeLinkHref" label="href to external code" type="text" />">View code on <perch:content id="c_codeLinkName" label="Name of the site containing the code" type="text" /></a>
+    </perch:if>
+</div>

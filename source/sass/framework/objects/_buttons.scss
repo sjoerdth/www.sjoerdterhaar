@@ -44,9 +44,10 @@
 }
 
 .o-button--tiny {
+    padding: $sb-baseline / 4;
+
     line-height: 1;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    font-size: $sb-fontsize * 0.75;
 }
 
 .o-button--big {

@@ -48,7 +48,7 @@
             <div class="o-grid__cell">
                 <div class="m-wrapper m-wrapper--shadow">
 
-                    <div class="m-article--body">
+                    <div class="m-article__body">
                         <div class="text-constrain h-contains-content-list">
                             <header>
                                 <h1 class="h1--dia-neg">2017 Tour de France</h1>
@@ -148,7 +148,7 @@
             <div class="o-grid__cell">
                 <div class="m-wrapper m-wrapper--shadow">
 
-                    <div class="m-article--body">
+                    <div class="m-article__body">
                         <div class="text-constrain h-contains-content-list">
                             <header>
                                 <h1 class="h1--dia-neg">2017 Tour de France Route</h1>

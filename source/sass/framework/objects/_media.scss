@@ -17,6 +17,16 @@
     display: flex;
 }
 
+.o-media--wrap-around {
+    display: block;
+    @extend .cf;
+
+    .o-media__img {
+        float: left;
+        display: inline-block;
+    }
+}
+
 .o-media--center {
     align-items: center;
 }
@@ -61,13 +71,7 @@
         }
     }
 
-    .o-media__img {
-        padding-left: $sb-baseline / 2;
 
-        img {
-            width: 100%;
-        }
-    }
 
 
 

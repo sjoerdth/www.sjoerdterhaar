@@ -2,8 +2,17 @@
     margin-bottom: $sb-baseline;
 }
 
-    .m-article--body {
+    .m-article__body {
         padding: $sb-baseline;
+    }
+
+    .m-article__body--hard-small {
+        @include media(null, $sb-bp__small){
+            padding: 0;
+        }
+    }
+
+    .m-article__body--fancy {
         border-left: 5px solid palette(brand-pink);
 
         background: white;
@@ -15,7 +24,9 @@
 
         color: white;
 
-        background: palette(brand-pink);
+        @include media(null, $sb-bp__small) {
+            padding: $sb-baseline / 2;
+        }
     }
 
     .m-article--tags {

@@ -1,0 +1,14 @@
+<perch:before>
+   <ol class="block-list">
+</perch:before>
+    <li>
+        <time class="m-date m-date--muted" datetime="<perch:blog id="postDateTime" format="%m %d %Y" />">
+            <span class="m-date__item"><perch:blog id="postDateTime" format="%d" /></span>
+            <span class="m-date__item"><perch:blog id="postDateTime" format="%b" /></span>
+            <span class="m-date__item"><perch:blog id="postDateTime" format="%Y" /></span>
+        </time>
+        <a class="h4 h4--body-font" href="<perch:blog id="postURL" />" rel="bookmark"><perch:blog id="postTitle" /></a>
+    </li>
+<perch:after>
+    </ol>
+</perch:after>

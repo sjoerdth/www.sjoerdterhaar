@@ -1,18 +1,30 @@
 .m-progress-label {
     display: block;
     position: absolute;
-    right: $sb-baseline / 2;
+    left: -5rem;
 
-    width: 100%;
-    max-width: 100px;
-    padding: $sb-baseline / 2;
 
+    width: 4rem;
+    padding: $sb-baseline / 4;
+
+    font-size: $sb-fontsize * 0.75;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
 
     background: palette(brand-orange);
     border-radius: $sb-border-radius;
     //box-shadow: 0 0 2px rgba(black, 0.3);
+
+    @include media(null, $sb-bp__small) {
+        left: -1.75rem;
+
+        width: 3rem;
+        padding: $sb-baseline / 4;
+
+
+        background: palette(brand-pink);
+        color: white;
+    }
 
     &:after {
         left: 100%;
@@ -25,8 +37,12 @@
         pointer-events: none;
         border-color: rgba(213, 158, 30, 0);
         border-left-color: palette(brand-orange);
-        border-width: 10px;
-        margin-top: -10px;
+        border-width: 0.5rem;
+        margin-top: -0.5rem;
+
+        @include media(null, $sb-bp__small) {
+            display: none;
+        }
     }
 }
 
@@ -34,16 +50,48 @@
     position: static;
 }
 
+.m-progress-label--one-tenth {
+    top: 10%;
+}
+
+.m-progress-label--two-tenths {
+    top: 20%;
+}
+
 .m-progress-label--one-quarter {
     top: 25%;
+}
+
+.m-progress-label--three-tenths {
+    top: 30%;
+}
+
+.m-progress-label--four-tenths {
+    top: 40%;
 }
 
 .m-progress-label--one-half {
     top: 50%;
 }
 
+.m-progress-label--six-tenths {
+    top: 60%;
+}
+
+.m-progress-label--seven-tenths {
+    top: 70%;
+}
+
 .m-progress-label--three-quarters {
     top: 75%;
+}
+
+.m-progress-label--eight-tenths {
+    top: 80%;
+}
+
+.m-progress-label--nine-tenths {
+    top: 90%;
 }
 
 .m-progress-label--finish {

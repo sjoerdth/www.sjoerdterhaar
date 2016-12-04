@@ -1,5 +1,41 @@
 .m-form {
+    display: block;
+    margin-bottom: $sb-baseline;
+}
 
+.m-form__list {
+    list-style: none;
+
+    li {
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px dotted palette(brand-grey, x-light);
+
+        &:last-child {
+            border: 0;
+        }
+    }
+}
+
+.m-form__label {
+    display: block;
+}
+
+.m-form__label--multi-col {
+    text-align: right;
+
+    @include media(null, $sb-bp__small) {
+        text-align: left;
+    }
+}
+
+
+.m-form__fieldset {
+    padding-right: $sb-baseline;
+    padding-left: $sb-baseline;
+
+    border-radius: $sb-border-radius;
+    background: rgba(white, 0.3);
 }
 
 .m-form--filter {
@@ -8,20 +44,24 @@
     margin-bottom: $sb-baseline;
 }
 
-    .m-form__element
-    {
+    .m-form__element {
         display: block;
         width: 100%;
-        padding: 0.5em;
-        border: 0;
-        background: white;
+
+        padding: 0.5rem;
+
+        border: 1px solid palette(brand-grey, x-light);
+        border-radius: $sb-border-radius;
+
         color: palette(grey, x-dark);
+
+        background: white;
     }
 
     .m-form__element--rounded {
         border-radius: 1000px;
-        padding-right: 1em;
-        padding-left: 1em;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
     /*
 
@@ -32,6 +72,6 @@
 
         .m-form-element__icon {
             @include vertical-align(absolute);
-            right: 1em;
+            right: 1rem;
         }
     }

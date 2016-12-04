@@ -1,105 +1,167 @@
-<article class="m-article o-grid o-grid--modern o-grid--equal-cells">
+<article class="o-grid o-grid--modern o-grid--equal-cells o-grid--modern-vertical-small">
 
-    <div class="o-grid__cell o-grid__cell--fixed-small h-pos-relative">
-        <div class="o-ratio">
-            <div class="o-ratio__size o-ratio__size--square">
-                <div class="m-article--date o-ratio__content h-v-align-center-flex">
-                    <time datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="3" divider-before="Publishdate" divider-after="Article" />">
-                        <span class="m-date"><perch:blog id="postDateTime" type="date" time="true" format="%d" /></span>
-                        <span class="m-date"><perch:blog id="postDateTime" type="date" time="true" format="%b" /></span>
-                        <span class="m-date"><perch:blog id="postDateTime" type="date" time="true" format="%Y" /></span>
-                    </time>
+    <div class="m-article o-grid__cell o-grid__cell--fixed-small small-col-1of1">
+        <div class="o-grid o-grid--modern o-grid--modern-vertical-medium-up">
+            <div class="o-grid__cell o-grid__cell--ui-solid-pink col-1of1 small-col-1of2">
+                <div class="o-ratio">
+                    <div class="o-ratio__size o-ratio__size--square o-ratio__size--unratio-small">
+                        <div class="m-article--date o-ratio__content h-v-align-center-flex">
+                            <time datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="4" divider-before="Publishdate" divider-after="Article" />">
+                            <span class="m-date m-date--post"><perch:blog id="postDateTime" type="date" time="true" format="%d" /></span>
+                            <span class="m-date m-date--post"><perch:blog id="postDateTime" type="date" time="true" format="%b" /></span>
+                            <span class="m-date m-date--post"><perch:blog id="postDateTime" type="date" time="true" format="%Y" /></span>
+                            </time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o-grid__cell o-grid__cell--ui-solid-blue col-1of1 small-col-1of2">
+                <div class="o-ratio">
+                    <div class="o-ratio__size o-ratio__size--square o-ratio__size--unratio-small">
+                        <div class="m-back-link o-ratio__content">
+                            <a class="m-back-link__link h-v-align-center-flex" href="/blog"><span class="m-back-link__body"><svg class="m-svg-icon-inline" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>back to blog<span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="o-ratio">
-            <div class="o-ratio__size o-ratio__size--square">
-                <div class="m-back-link o-ratio__content">
-                    <a class="m-back-link__link h-v-align-center-flex" href="/blog"><span class="m-back-link__body"><svg class="m-svg-icon-inline" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>back to blog<span></a>
-                </div>
-            </div>
-        </div>
+    </div><!-- END:o-grid__cell -->
 
+    <div class="o-grid__cell small-col-1of1">
 
-
-
-
-        <perch:if exists="progress_25">
-            <div class="m-progress-label m-progress-label--one-quarter">
-            <perch:blog id="progress_25" type="checkbox" label="Progress 25%" value="25%" />
-            </div>
-        </perch:if>
-
-
-        <perch:if exists="progress_50">
-            <div class="m-progress-label m-progress-label--one-half">
-            <perch:blog id="progress_50" type="checkbox" label="Progress 50%" value="50%" />
-            </div>
-        </perch:if>
-
-
-        <perch:if exists="progress_75">
-            <div class="m-progress-label m-progress-label--three-quarters">
-            <perch:blog id="progress_75" type="checkbox" label="Progress 75%" value="75%" />
-            </div>
-        </perch:if>
-
-
-        <perch:if exists="progress_100">
-            <div class="m-progress-label m-progress-label--finish">
-            <perch:blog id="progress_100" type="checkbox" label="Progress 100%" value="end" />
-            </div>
-        </perch:if>
-
-
-    </div>
-
-    <div class="o-grid__cell">
         <div class="m-wrapper m-wrapper--shadow">
 
-            <div class="m-article--body">
+            <div class="m-article__body m-article__body--fancy h-pos-relative">
+
                 <div class="text-constrain">
                     <header>
                         <h1>
                             <perch:blog id="postTitle" type="text" label="Blog Title" required="true" size="xl autowidth" order="1" />
                         </h1>
-                    <perch:if exists="blogPostSubtitle">
+                        <perch:if exists="blogPostSubtitle">
                         <span class="subheading h3">
                             <perch:blog id="blogPostSubtitle" type="text" label="Blog Subtitle" size="xl autowidth" order="2" />
                         </span>
-                    </perch:if>
+                        </perch:if>
+
+                        <perch:blog type="image" id="c_mastheadBlog" label="Masthead" order="3" suppress="true" />
+
                     </header>
                 </div>
 
-                    <perch:blocks order="4">
+                <perch:blocks order="5">
 
-                        <perch:block label="Plain text with dropcap" type="b_plainTextDropcap">
-                            <perch:template path="content/blocks/plaintext-dc.html" rescope="parent" />
-                        </perch:block>
+                    <perch:block label="Plain text with dropcap" type="b_plainTextDropcap">
+                        <perch:template path="content/blocks/plaintext-dc.html" rescope="parent" />
+                    </perch:block>
 
-                        <perch:block label="Plain text" type="b_plainText">
-                            <perch:template path="content/blocks/plaintext.html" rescope="parent" />
-                        </perch:block>
+                    <perch:block label="Plain text" type="b_plainText">
+                        <perch:template path="content/blocks/plaintext.html" rescope="parent" />
+                    </perch:block>
 
-                        <perch:block label="Pull quote" type="b_pullquote">
-                            <perch:template path="content/blocks/pullquote.html" rescope="parent" />
-                        </perch:block>
+                    <perch:block label="Pull quote" type="b_pullquote">
+                        <perch:template path="content/blocks/pullquote.html" rescope="parent" />
+                    </perch:block>
 
-                        <perch:block label="Media - text | image" type="b_mediaTextImage">
-                            <perch:template path="content/blocks/media-text-image.html" rescope="parent" />
-                        </perch:block>
+                    <perch:block label="Media - text | image" type="b_mediaTextImage">
+                        <perch:template path="content/blocks/media-text-image.html" rescope="parent" />
+                    </perch:block>
 
-                        <perch:block label="Media - image | text" type="b_mediaImageText">
-                            <perch:template path="content/blocks/media-image-text.html" rescope="parent" />
-                        </perch:block>
+                    <perch:block label="Media - image | text" type="b_mediaImageText">
+                        <perch:template path="content/blocks/media-image-text.html" rescope="parent" />
+                    </perch:block>
 
-                    </perch:blocks>
+                    <perch:block label="Code" type="b_code">
+                        <perch:template path="content/blocks/code.html" rescope="parent" />
+                    </perch:block>
 
+                </perch:blocks>
+
+
+                <perch:if exists="progress_10">
+                    <div class="m-progress-label m-progress-label--one-tenth">
+                        <perch:blog id="progress_10" type="checkbox" label="Progress 10%" value="10%" divider-before="Progress markers" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_20">
+                    <div class="m-progress-label m-progress-label--two-tenths">
+                        <perch:blog id="progress_20" type="checkbox" label="Progress 20%" value="20%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_25">
+                    <div class="m-progress-label m-progress-label--one-quarter">
+                        <perch:blog id="progress_25" type="checkbox" label="Progress 25%" value="25%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_30">
+                    <div class="m-progress-label m-progress-label--three-quarters">
+                        <perch:blog id="progress_30" type="checkbox" label="Progress 30%" value="30%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_40">
+                    <div class="m-progress-label m-progress-label--four-tenths">
+                        <perch:blog id="progress_40" type="checkbox" label="Progress 40%" value="40%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_50">
+                    <div class="m-progress-label m-progress-label--one-half">
+                        <perch:blog id="progress_50" type="checkbox" label="Progress 50%" value="50%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_60">
+                    <div class="m-progress-label m-progress-label--six-tenths">
+                        <perch:blog id="progress_60" type="checkbox" label="Progress 60%" value="60%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_70">
+                    <div class="m-progress-label m-progress-label--seven-tenths">
+                        <perch:blog id="progress_70" type="checkbox" label="Progress 70%" value="70%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_75">
+                    <div class="m-progress-label m-progress-label--three-quarters">
+                        <perch:blog id="progress_75" type="checkbox" label="Progress 75%" value="75%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_80">
+                    <div class="m-progress-label m-progress-label--eight-tenths">
+                        <perch:blog id="progress_80" type="checkbox" label="Progress 80%" value="80%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_90">
+                    <div class="m-progress-label m-progress-label--nine-tenths">
+                        <perch:blog id="progress_90" type="checkbox" label="Progress 90%" value="90%" />
+                    </div>
+                </perch:if>
+
+                <perch:if exists="progress_100">
+                    <div class="m-progress-label m-progress-label--finish">
+                        <perch:blog id="progress_100" type="checkbox" label="Progress 100%" value="end" />
+                    </div>
+                </perch:if>
+
+            </div><!-- END:m-article__body -->
+
+            <div class="m-article--tags">
+                <div class="text-constrain ">
+                    <perch:blog id="tags" html="true" />
                 </div>
             </div>
 
-        </div>
-    </div>
+        </div><!-- END:m-wrapper m-wrapper--shadow -->
+
+    </div><!-- END:o-grid__cell -->
+
 </article>

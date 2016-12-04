@@ -3,6 +3,11 @@
 
     border-radius: $sb-border-radius;
     background: rgba(palette(brand-grey, x-light), 0.35);
+
+    @include media(null, $sb-bp__medium) {
+        padding: 0;
+        background: none;
+    }
 }
 
 .o-media--small {
@@ -17,6 +22,8 @@
 
         .o-media__body {
             order: 2;
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 }
@@ -33,6 +40,8 @@
 
         .o-media__body {
             order: 2;
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 }
@@ -48,9 +57,16 @@
     }
 }
 
-.o-media__body,
-.o-media__body--soft-sides {
-    @include media(null, $sb-bp__small) {
-        padding: $sb-baseline;
+.o-media__img--avatar {
+    img {
+        border-radius: $sb-border-radius;
+        border: 1px solid palette(brand-grey, x-light);
     }
 }
+
+//.o-media__body,
+//.o-media__body--soft-sides {
+//    @include media(null, $sb-bp__small) {
+//        padding: $sb-baseline;
+//    }
+//}

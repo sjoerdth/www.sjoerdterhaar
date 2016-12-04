@@ -1,0 +1,25 @@
+.main .h2, .main h2, h2.divider, .block-item .divider:first-child {
+    font-size: 150%;
+    color: white;
+    background-color: grey;
+}
+
+form .field {
+    border-bottom: 1px dotted grey;
+}
+
+.block-add-bar .add {
+    padding: 10px;
+    font-size: 115%;
+    background: grey;
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: none;
+}
+
+.block-add-bar .add:before {
+    content: '+';
+    background: none;
+    color: white;
+}

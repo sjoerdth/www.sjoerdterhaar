@@ -1,14 +1,9 @@
-// Large
-.o-ratio__size--2-1 {
-    @include ratio(2, 1);
-}
+.o-ratio__size--unratio-small {
+    @include media(null, $sb-bp__small) {
+        padding-bottom: 0;
 
-// Medium
-.o-ratio__size--3-1 {
-    @include ratio(3, 1);
-}
-
-// Small
-.o-ratio__size--40-25 {
-    @include ratio(40, 25);
+        .o-ratio__content {
+            position: static;
+        }
+    }
 }

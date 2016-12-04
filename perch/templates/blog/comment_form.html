@@ -1,32 +1,64 @@
 <perch:if id="postAllowComments" value="1">
 
-	<perch:form id="comment" method="post" app="perch_blog" class="comment-form" action="<perch:blog id="postURL" />">
-		<fieldset>
-		   <legend>Leave a comment</legend>
-			<div>
-				<perch:label for="commentName">Name</perch:label>
-				<perch:input type="text" id="commentName" required="true" label="Name" antispam="name" />
-				<perch:error for="commentName" type="required">Required</perch:error>
-			</div>
-			<div>
-				<perch:label for="commentEmail">Email</perch:label>
-				<perch:input type="email" id="commentEmail" required="true" label="Email" antispam="email" />
-				<perch:error for="commentEmail" type="required">Required</perch:error>
-				<perch:error for="commentEmail" type="format">Check format of address</perch:error>
-			</div>
-			<div>
-				<perch:label for="commentURL">Website</perch:label>
-				<perch:input type="url" id="commentURL" placeholder="http://" label="URL" antispam="url" />
-			</div>
-			<div>
-				<perch:label for="commentHTML">Comment</perch:label>
-				<perch:input type="textarea" id="commentHTML" required="true" label="Message" antispam="body" />
-				<perch:error for="commentHTML" type="required">Required</perch:error>
-			</div>
-			<div>
-				<perch:input type="hidden" id="postID" value="<perch:blog id="postID" />" />
-				<perch:input type="submit" id="submitComment" value="Submit" />
-			</div>
+	<perch:form id="comment" method="post" app="perch_blog" class="m-form" action="<perch:blog id="postURL" />">
+		<fieldset class="m-form__fieldset">
+		   <legend class="h3 h-text-center">Leave a comment</legend>
+			<ul class="m-form__list">
+				<li>
+                    <div class="o-grid o-grid--modern o-grid--gutter o-grid--modern-vertical-small">
+                        <div class="o-grid__cell col-1of4 small-col-1of1">
+                            <perch:label class="m-form__label m-form__label--multi-col" for="commentName">Name</perch:label>
+                        </div>
+                        <div class="o-grid__cell col-3of4 small-col-1of1">
+                            <perch:input class="o-grid__cell m-form__element" type="text" id="commentName" required="true" label="Name" antispam="name" />
+                            <perch:error for="commentName" type="required">Required</perch:error>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="o-grid o-grid--modern o-grid--gutter o-grid--modern-vertical-small">
+                        <div class="o-grid__cell col-1of4 small-col-1of1">
+                            <perch:label class="m-form__label m-form__label--multi-col" for="commentEmail">Email</perch:label>
+                        </div>
+                        <div class="o-grid__cell col-3of4 small-col-1of1">
+                            <perch:input class="m-form__element" type="email" id="commentEmail" required="true" label="Email" antispam="email" />
+                            <perch:error for="commentEmail" type="required">Required</perch:error>
+                            <perch:error for="commentEmail" type="format">Check format of address</perch:error>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="o-grid o-grid--modern o-grid--gutter o-grid--modern-vertical-small">
+                        <div class="o-grid__cell col-1of4 small-col-1of1">
+                            <perch:label class="m-form__label m-form__label--multi-col" for="commentURL">Website</perch:label>
+                        </div>
+                        <div class="o-grid__cell col-3of4 small-col-1of1">
+                            <perch:input class="m-form__element" type="url" id="commentURL" placeholder="http://" label="URL" antispam="url" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="o-grid o-grid--modern o-grid--gutter o-grid--modern-vertical-small">
+                        <div class="o-grid__cell col-1of4 small-col-1of1">
+                            <perch:label class="m-form__label m-form__label--multi-col" for="commentHTML">Comment</perch:label>
+                        </div>
+                        <div class="o-grid__cell col-3of4 small-col-1of1">
+                            <perch:input class="m-form__element" type="textarea" id="commentHTML" required="true" label="Message" antispam="body" />
+                            <perch:error for="commentHTML" type="required">Required</perch:error>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="o-grid o-grid--modern o-grid--gutter o-grid--modern-vertical-small">
+                        <div class="o-grid__cell col-1of4 small-col-1of1">
+                        </div>
+                        <div class="o-grid__cell col-3of4 small-col-1of1">
+                            <perch:input type="hidden" id="postID" value="<perch:blog id="postID" />" />
+                            <perch:input class="o-button o-button--solid-blue o-button--fancy o-button--full" type="submit" id="submitComment" value="Submit" />
+                        </div>
+                    </div>
+                </li>
+			</ul>
 
 	    </fieldset>
 		<perch:success>

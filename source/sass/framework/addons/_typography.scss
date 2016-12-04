@@ -104,7 +104,8 @@ p {
     >p:first-child {
         &:first-letter {
             float: left;
-            line-height: $sb-baseline * 2;
+            // Line-height should be * 2, but then it just crosses over to the third line of text
+            line-height: $sb-baseline * 1.9;
             font-size: $sb-fontsize * 3;
             margin-right: 2px;
         }

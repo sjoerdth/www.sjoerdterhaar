@@ -1,3 +1,10 @@
+.o-grid--modern-vertical-medium-up {
+    @include media($sb-bp__small, null) {
+        flex-direction: column;
+    }
+}
+
+
 .o-grid--push-down {
     margin-bottom: $sb-baseline;
 }
@@ -5,6 +12,11 @@
 .o-grid__cell--fixed-small {
     min-width: 9rem;
     max-width: 9rem;
+
+    @include media(null, $sb-bp__small) {
+        max-width: none;
+        margin-bottom: 0!important;
+    }
 }
 
 .o-grid__cell--ui {
@@ -38,4 +50,12 @@
             color: palette(brand-blue, dark);
         }
     }
+}
+
+.o-grid__cell--ui-solid-pink {
+    background: palette(brand-pink);
+}
+
+.o-grid__cell--ui-solid-blue {
+    background: palette(brand-blue);
 }
